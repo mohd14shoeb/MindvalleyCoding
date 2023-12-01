@@ -20,6 +20,12 @@
 		4B9804202B1A6A9100DEB148 /* Channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B98041F2B1A6A9100DEB148 /* Channels.json */; };
 		4B9804222B1A6AA800DEB148 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804212B1A6AA800DEB148 /* Categories.json */; };
 		4B9804242B1A6AC100DEB148 /* NewEpisodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804232B1A6AC100DEB148 /* NewEpisodes.json */; };
+		4B9804292B1A6C5200DEB148 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804282B1A6C5200DEB148 /* Router.swift */; };
+		4B98042B2B1A6C6900DEB148 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98042A2B1A6C6900DEB148 /* NetworkLogger.swift */; };
+		4B98042D2B1A6C7F00DEB148 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98042C2B1A6C7F00DEB148 /* HTTPTask.swift */; };
+		4B98042F2B1A6C9200DEB148 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98042E2B1A6C9200DEB148 /* HTTPMethod.swift */; };
+		4B9804312B1A6CA300DEB148 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804302B1A6CA300DEB148 /* EndPointType.swift */; };
+		4B9804332B1A6CCF00DEB148 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804322B1A6CCF00DEB148 /* NetworkEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		4B98041F2B1A6A9100DEB148 /* Channels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Channels.json; sourceTree = "<group>"; };
 		4B9804212B1A6AA800DEB148 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
 		4B9804232B1A6AC100DEB148 /* NewEpisodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewEpisodes.json; sourceTree = "<group>"; };
+		4B9804282B1A6C5200DEB148 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4B98042A2B1A6C6900DEB148 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		4B98042C2B1A6C7F00DEB148 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		4B98042E2B1A6C9200DEB148 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4B9804302B1A6CA300DEB148 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		4B9804322B1A6CCF00DEB148 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,8 @@
 		4B9804182B1A689300DEB148 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4B9804262B1A6C0200DEB148 /* Extension */,
+				4B9804252B1A6BF000DEB148 /* Network */,
 				4B98041A2B1A692C00DEB148 /* Module */,
 			);
 			path = Source;
@@ -193,6 +207,34 @@
 				4B98041D2B1A69CD00DEB148 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4B9804252B1A6BF000DEB148 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4B9804272B1A6C3900DEB148 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4B9804262B1A6C0200DEB148 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4B9804272B1A6C3900DEB148 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4B9804282B1A6C5200DEB148 /* Router.swift */,
+				4B98042C2B1A6C7F00DEB148 /* HTTPTask.swift */,
+				4B98042E2B1A6C9200DEB148 /* HTTPMethod.swift */,
+				4B9804302B1A6CA300DEB148 /* EndPointType.swift */,
+				4B98042A2B1A6C6900DEB148 /* NetworkLogger.swift */,
+				4B9804322B1A6CCF00DEB148 /* NetworkEnvironment.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +371,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B98042D2B1A6C7F00DEB148 /* HTTPTask.swift in Sources */,
+				4B98042B2B1A6C6900DEB148 /* NetworkLogger.swift in Sources */,
+				4B9804312B1A6CA300DEB148 /* EndPointType.swift in Sources */,
 				4B9803EB2B1A686800DEB148 /* ViewController.swift in Sources */,
 				4B98041E2B1A69CD00DEB148 /* HomeView.swift in Sources */,
+				4B98042F2B1A6C9200DEB148 /* HTTPMethod.swift in Sources */,
+				4B9804292B1A6C5200DEB148 /* Router.swift in Sources */,
 				4B9803E72B1A686800DEB148 /* AppDelegate.swift in Sources */,
+				4B9804332B1A6CCF00DEB148 /* NetworkEnvironment.swift in Sources */,
 				4B9803E92B1A686800DEB148 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
