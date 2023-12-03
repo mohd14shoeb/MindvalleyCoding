@@ -52,6 +52,9 @@
 		4B9804592B1B833E00DEB148 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */; };
 		4B98045B2B1B836D00DEB148 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */; };
 		4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */; };
+		4BD84BC22B1C6314000AE51A /* Course​Design​CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */; };
+		4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */; };
+		4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,9 @@
 		4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
 		4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCard.swift; sourceTree = "<group>"; };
+		4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course​Design​CarouselView.swift"; sourceTree = "<group>"; };
+		4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCarouselView.swift; sourceTree = "<group>"; };
+		4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCourseCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 		4B9804182B1A689300DEB148 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4BD84BC72B1C7494000AE51A /* CommonUIComponent */,
 				4B98043B2B1B15E500DEB148 /* CommonUtils */,
 				4B9804262B1A6C0200DEB148 /* Extension */,
 				4B9804252B1A6BF000DEB148 /* Network */,
@@ -266,8 +273,10 @@
 				4B98041D2B1A69CD00DEB148 /* HomeView.swift */,
 				4B9804412B1B3AA900DEB148 /* CategoriesSectionListView.swift */,
 				4B8658452B1BAE5300D01483 /* NewEpisodesCarouselView.swift */,
+				4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */,
+				4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */,
+				4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */,
 				4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */,
-				4B8658492B1BCC3E00D01483 /* ImageCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +385,14 @@
 				4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		4BD84BC72B1C7494000AE51A /* CommonUIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				4B8658492B1BCC3E00D01483 /* ImageCardView.swift */,
+			);
+			path = CommonUIComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,8 +545,10 @@
 				4B9804492B1B50E200DEB148 /* NewEpisodes.swift in Sources */,
 				4B98042B2B1A6C6900DEB148 /* NetworkLogger.swift in Sources */,
 				4B9804312B1A6CA300DEB148 /* EndPointType.swift in Sources */,
+				4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */,
 				4B9803EB2B1A686800DEB148 /* ViewController.swift in Sources */,
 				4B98044C2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift in Sources */,
+				4BD84BC22B1C6314000AE51A /* Course​Design​CarouselView.swift in Sources */,
 				4B98043A2B1B15AD00DEB148 /* Color+Ext.swift in Sources */,
 				4B86584C2B1BDBD700D01483 /* ChannelsViewModel.swift in Sources */,
 				4B9804422B1B3AA900DEB148 /* CategoriesSectionListView.swift in Sources */,
@@ -545,6 +564,7 @@
 				4B9804292B1A6C5200DEB148 /* Router.swift in Sources */,
 				4B86583C2B1BA42600D01483 /* NewEpisodes+stub.swift in Sources */,
 				4B9803E72B1A686800DEB148 /* AppDelegate.swift in Sources */,
+				4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */,
 				4B9804542B1B73DE00DEB148 /* HomeServiceable.swift in Sources */,
 				4B9804332B1A6CCF00DEB148 /* NetworkEnvironment.swift in Sources */,
 				4B8658402B1BA45000D01483 /* Channels+stub.swift in Sources */,

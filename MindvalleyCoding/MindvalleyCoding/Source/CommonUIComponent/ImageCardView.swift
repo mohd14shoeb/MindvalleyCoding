@@ -48,5 +48,5 @@ struct ImageCardView: View {
 #Preview {
     ImageCardView(imageURL: NewEpisodesResponse.stubNewEpisodeURL,
              imageWidth: 197.0,
-             imageHeight: 320.0)
+                  imageHeight: 320.0).background(Color.homeScreenBackGroundColor)
 }

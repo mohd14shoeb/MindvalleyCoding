@@ -28,11 +28,17 @@ struct Channels: Codable {
     let iconAsset: IconAsset?
     let coverAsset: CoverAsset?
     let slug: String?
+    
+    var coverAssetURL: String {
+        coverAsset?.url ?? ""
+    }
 }
 
 // MARK: - CoverAsset
 struct CoverAsset: Codable {
     let url: String?
+    
+    
 }
 
 // MARK: - IconAsset
@@ -59,8 +65,13 @@ enum TypeEnum: String, Codable {
 }
 
 // MARK: - Series
-struct Series: Codable {
-    let title: String
+struct Series: Codable, Identifiable {
+    let title: String?
     let coverAsset: CoverAsset?
-    let id: String?
+    var id: String {
+        title ?? ""
+    }
+    var coverAssetURL: String {
+        coverAsset?.url ?? ""
+    }
 }

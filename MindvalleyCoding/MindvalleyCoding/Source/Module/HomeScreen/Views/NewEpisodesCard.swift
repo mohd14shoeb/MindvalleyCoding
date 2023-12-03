@@ -9,28 +9,34 @@ import SwiftUI
 import CachedAsyncImage
 
 struct NewEpisodesCard: View {
-    private let media: Media
+    private let imageURL: String
+    private let footerTitle: String?
+    private let footerSubTitle: String?
     private let imageWidth: Double
     private let imageHeight: Double
     
-    init(media: Media, 
+    init(imageURL: String, 
+         footerTitle: String,
+         footerSubTitle: String,
          imageWidth: Double,
          imageHeight: Double) {
-        self.media = media
+        self.imageURL = imageURL
+        self.footerTitle = footerTitle
+        self.footerSubTitle = footerSubTitle
         self.imageWidth = imageWidth
         self.imageHeight = imageHeight
     }
     var body: some View {
         VStack {
-            ImageCardView(imageURL: media.mediaURL,
+            ImageCardView(imageURL: imageURL,
                           imageWidth: 174, imageHeight: 280)
                 .padding(.bottom, 8)
-            Text(media.title ?? "")
+            Text(footerTitle ?? "")
                 .frame(maxWidth:.infinity, alignment: .topLeading)
                 .foregroundColor(Color.listSectionTitleColor)
                 .font(.custom("Gilroy-Regular", size: 17))
                 .padding(.bottom, 8)
-            Text(media.channel?.title ?? "")
+            Text(footerSubTitle ?? "")
                 .frame(maxWidth:.infinity, alignment: .topLeading)
                 .foregroundColor(Color.newApisodesTitleColor)
                 .font(.custom("Gilroy-Regular", size: 13))
@@ -42,6 +48,8 @@ struct NewEpisodesCard: View {
 }
 
 #Preview {
-    NewEpisodesCard(media: NewEpisodesResponse.stubNewEpisode,
+    NewEpisodesCard(imageURL: NewEpisodesResponse.stubNewEpisode.mediaURL, 
+                    footerTitle: NewEpisodesResponse.stubNewEpisode.mediaTitle,
+                    footerSubTitle: NewEpisodesResponse.stubNewEpisode.channelTitle,
                     imageWidth: 174, imageHeight: 380)
 }

@@ -30,11 +30,18 @@ struct Media: Codable, Identifiable {
     var mediaURL: String {
         coverAsset?.url ?? ""
     }
+    var mediaTitle: String {
+        title ?? ""
+    }
+    var channelTitle: String {
+        channel?.title ?? ""
+    }
     
 }
 
 // MARK: - Channel
 struct Channel: Codable {
-    let title: String
+    let title: String?
+    
 }
 
