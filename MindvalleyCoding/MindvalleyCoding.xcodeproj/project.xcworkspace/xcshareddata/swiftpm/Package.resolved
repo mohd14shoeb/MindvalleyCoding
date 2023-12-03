@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "cachedasyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bullinnyc/CachedAsyncImage",
+      "state" : {
+        "revision" : "bae5d65dee33d012c3f97520519259698a4183f6",
+        "version" : "2.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}

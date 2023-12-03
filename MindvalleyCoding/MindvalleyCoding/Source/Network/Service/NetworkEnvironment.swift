@@ -20,9 +20,9 @@ struct NetworkEnvironment {
     static let environment: APIEnvironment = .qaEnv
     static var baseURL: String {
         switch environment {
-        case .production: return "https://randomuser.me/"
-        case .qaEnv: return "https://jsonplaceholder.typicode.com/"
-        case .staging: return "https://randomuser.me/"
+        case .production: return "https://pastebin.com/"
+        case .qaEnv: return "https://pastebin.com/"
+        case .staging: return "https://pastebin.com/"
         }
     }
 }

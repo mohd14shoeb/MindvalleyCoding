@@ -22,11 +22,16 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
 
     // MARK: private  Properties
     private var task: URLSessionTask?
-
+ 
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
-        let session = URLSession.shared
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.requestCachePolicy = .returnCacheDataDontLoad
+        sessionConfig.timeoutIntervalForRequest = 30.0
+        sessionConfig.timeoutIntervalForResource = 30.0
+        let session = URLSession(configuration: sessionConfig)
         do {
             let request = try self.buildRequest(from: route)
+            
             task = session.dataTask(with: request,
                                     completionHandler: { data, response, error in
                 NetworkLogger.log(responseData: data,
@@ -49,8 +54,12 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         let baseAppend = base.appendingPathComponent(route.path).absoluteString.removingPercentEncoding ?? ""
         guard let url = URL(string: baseAppend) else { fatalError("baseURL could not be configured.") }
 
+        
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
         request.httpMethod = route.httpMethod.rawValue
+        if !NetworkMonitor.shared.isReachable {
+            request.cachePolicy = .returnCacheDataDontLoad
+        }
 
         return request
     }
