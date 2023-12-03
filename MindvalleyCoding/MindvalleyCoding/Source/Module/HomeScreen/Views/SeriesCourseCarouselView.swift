@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct SeriesCourseCarouselView: View {
+    @StateObject private var channelViewModel = ChannelsViewModel(networkManager: HomeServiceManager())
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        SeriesCarouselView(title: "Hello", series: ChannelsResponse.stubChannel?.series)
+        VStack() {
+            if let channels = channelViewModel.channelsArray, !channels.isEmpty {
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 16) {
+                        ForEach(channels) { channel in
+                            if let series = channel.series, !series.isEmpty {
+                                SeriesCarouselView(channels: channel)
+                            } else {
+                                CourseCarouselView(latestMedias: channel)
+                            }
+                        }
+                    }
+                }
+            }
+        }.task {
+            self.channelViewModel.getChannelSeriesAndCourseList()
+        }
     }
 }
 

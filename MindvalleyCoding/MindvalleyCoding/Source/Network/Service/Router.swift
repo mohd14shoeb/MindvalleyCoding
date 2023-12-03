@@ -25,9 +25,12 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
  
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.requestCachePolicy = .returnCacheDataDontLoad
-        sessionConfig.timeoutIntervalForRequest = 30.0
-        sessionConfig.timeoutIntervalForResource = 30.0
+       // sessionConfig.requestCachePolicy = .returnCacheDataDontLoad
+      //  sessionConfig.requestCachePolicy = .returnCacheDataElseLoad
+        sessionConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
+
+//        sessionConfig.timeoutIntervalForRequest = 30.0
+//        sessionConfig.timeoutIntervalForResource = 30.0
         let session = URLSession(configuration: sessionConfig)
         do {
             let request = try self.buildRequest(from: route)
@@ -55,8 +58,10 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         guard let url = URL(string: baseAppend) else { fatalError("baseURL could not be configured.") }
 
         
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60.0)
         request.httpMethod = route.httpMethod.rawValue
+        request.addValue("no-cache", forHTTPHeaderField: "cache-control")
+        
         if !NetworkMonitor.shared.isReachable {
             request.cachePolicy = .returnCacheDataDontLoad
         }

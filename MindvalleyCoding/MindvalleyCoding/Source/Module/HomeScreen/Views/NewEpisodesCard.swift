@@ -31,16 +31,21 @@ struct NewEpisodesCard: View {
             ImageCardView(imageURL: imageURL,
                           imageWidth: 174, imageHeight: 280)
                 .padding(.bottom, 8)
-            Text(footerTitle ?? "")
-                .frame(maxWidth:.infinity, alignment: .topLeading)
-                .foregroundColor(Color.listSectionTitleColor)
-                .font(.custom("Gilroy-Regular", size: 17))
-                .padding(.bottom, 8)
-            Text(footerSubTitle ?? "")
-                .frame(maxWidth:.infinity, alignment: .topLeading)
-                .foregroundColor(Color.newApisodesTitleColor)
-                .font(.custom("Gilroy-Regular", size: 13))
-                .padding(.bottom, 8)
+            Group {
+                Text(footerTitle ?? "")
+                    .frame(maxWidth:.infinity, alignment: .topLeading)
+                    .foregroundColor(Color.listSectionTitleColor)
+                    .font(.custom("Gilroy-Regular", size: 17))
+                    .padding(.bottom, 8)
+                Text(footerSubTitle ?? "")
+                    .frame(maxWidth:.infinity, alignment: .topLeading)
+                    .foregroundColor(Color.newApisodesTitleColor)
+                    .font(.custom("Gilroy-Regular", size: 13))
+                
+                    
+            }
+            .padding([.leading, .trailing], 4)
+            .padding(.bottom, 8)
             Spacer()
         }
         .frame(width: self.imageWidth, height:  self.imageHeight)

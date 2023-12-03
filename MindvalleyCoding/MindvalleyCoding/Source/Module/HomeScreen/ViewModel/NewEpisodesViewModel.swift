@@ -35,11 +35,11 @@ class NewEpisodesViewModel: ObservableObject {
                                    homeApi: .getNewEpisodesList) { [weak self] (response, error) in
             
             if error != nil {
-                print(error)
+                print(error ?? "")
             } else {
                 DispatchQueue.main.async {
                     self?.newApisodesArray = response?.data.media
-                    print(response)
+                   // print(response)
                 }
             }
         }

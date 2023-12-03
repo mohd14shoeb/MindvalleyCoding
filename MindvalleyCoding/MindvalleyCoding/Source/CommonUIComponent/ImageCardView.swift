@@ -27,7 +27,7 @@ struct ImageCardView: View {
                     url: self.imageURL,
                     placeholder: {
                         ZStack {
-                            Color.gray.opacity(0.03)
+                            Color.yellow.opacity(0.8)
                             ProgressView()
                         }
                     },

@@ -35,11 +35,11 @@ class CategoriesSectionViewModel: ObservableObject {
                                    homeApi: .Categories) { [weak self] (response, error) in
             
             if error != nil {
-                print(error)
+                print(error ?? "")
             } else {
                 DispatchQueue.main.async {
                     self?.categorySectionArray = response?.data?.categories
-                    print(response)
+                    //print(response)
                 }
             }
         }

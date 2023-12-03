@@ -24,4 +24,12 @@ extension ChannelsResponse {
     static var stubSerie: Series? {
         return stubSeries?.first
     }
+    
+    static var stubMedias: [LatestMedia]? {
+        return stubChannel?.latestMedia
+    }
+    
+    static var stubMedia: LatestMedia? {
+        return stubMedias?.first
+    }
 }

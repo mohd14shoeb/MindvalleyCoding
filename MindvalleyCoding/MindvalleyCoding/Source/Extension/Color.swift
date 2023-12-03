@@ -81,14 +81,6 @@ extension Color {
             self.init(.sRGB, red: 1, green: 1, blue: 1, opacity: 1)
         }
     }
-    
-    static let homeScreenBackGroundColor = Color(hex: "#23272F")
-    static let navigationTitleColor = Color(hex: "#C1C1C1")
-    static let listSectionTitleColor = Color(hex: "#FFFFFF")
-    static let categoryBackgroundColor = Color(hex: "#95989D33")
-    static let newApisodesTitleColor = Color(hex: "#95989D")
-    
-    
 }
 
 

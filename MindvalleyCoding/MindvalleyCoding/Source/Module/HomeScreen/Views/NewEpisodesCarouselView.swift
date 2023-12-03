@@ -28,7 +28,6 @@ struct NewEpisodesCarouselView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(movies) { movie in
-                           // NewEpisodesCard(media: movie, imageWidth: 174, imageHeight: 390)
                             NewEpisodesCard(imageURL: movie.mediaURL, footerTitle: movie.mediaTitle,
                                             footerSubTitle: movie.channelTitle,
                                             imageWidth: 174, imageHeight: 390)
@@ -38,7 +37,7 @@ struct NewEpisodesCarouselView: View {
                     }
                 }
                 Divider()
-                    .frame(height: 5)
+                    .frame(height: 1)
                     .overlay(.gray)
                     .padding([.leading,.trailing], 16)
             }

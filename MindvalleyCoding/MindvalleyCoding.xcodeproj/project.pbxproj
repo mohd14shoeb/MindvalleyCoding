@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B10339D2B1C913E008EE486 /* ChannelSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */; };
 		4B86583A2B1BA3C300D01483 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B8658392B1BA3C300D01483 /* CachedAsyncImage */; };
 		4B86583C2B1BA42600D01483 /* NewEpisodes+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583B2B1BA42600D01483 /* NewEpisodes+stub.swift */; };
 		4B86583E2B1BA43F00D01483 /* Categories+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583D2B1BA43F00D01483 /* Categories+stub.swift */; };
@@ -45,16 +46,16 @@
 		4B9804472B1B502A00DEB148 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804462B1B502A00DEB148 /* Channels.swift */; };
 		4B9804492B1B50E200DEB148 /* NewEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804482B1B50E200DEB148 /* NewEpisodes.swift */; };
 		4B98044C2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98044B2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift */; };
-		4B98044F2B1B727800DEB148 /* ChannelServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98044E2B1B727800DEB148 /* ChannelServiceable.swift */; };
 		4B9804522B1B730500DEB148 /* HomeServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804512B1B730500DEB148 /* HomeServiceManager.swift */; };
 		4B9804542B1B73DE00DEB148 /* HomeServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9804532B1B73DE00DEB148 /* HomeServiceable.swift */; };
 		4B9804572B1B81AE00DEB148 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804562B1B81AE00DEB148 /* Gilroy-Regular.ttf */; };
 		4B9804592B1B833E00DEB148 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */; };
 		4B98045B2B1B836D00DEB148 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */; };
 		4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */; };
-		4BD84BC22B1C6314000AE51A /* Course​Design​CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */; };
 		4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */; };
 		4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */; };
+		4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */; };
+		4BD84BCB2B1C7F79000AE51A /* CourseDesignCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BCA2B1C7F79000AE51A /* CourseDesignCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSectionHeaderView.swift; sourceTree = "<group>"; };
 		4B86583B2B1BA42600D01483 /* NewEpisodes+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEpisodes+stub.swift"; sourceTree = "<group>"; };
 		4B86583D2B1BA43F00D01483 /* Categories+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+stub.swift"; sourceTree = "<group>"; };
 		4B86583F2B1BA45000D01483 /* Channels+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+stub.swift"; sourceTree = "<group>"; };
@@ -116,16 +118,16 @@
 		4B9804462B1B502A00DEB148 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		4B9804482B1B50E200DEB148 /* NewEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodes.swift; sourceTree = "<group>"; };
 		4B98044B2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionViewModel.swift; sourceTree = "<group>"; };
-		4B98044E2B1B727800DEB148 /* ChannelServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelServiceable.swift; sourceTree = "<group>"; };
 		4B9804512B1B730500DEB148 /* HomeServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceManager.swift; sourceTree = "<group>"; };
 		4B9804532B1B73DE00DEB148 /* HomeServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceable.swift; sourceTree = "<group>"; };
 		4B9804562B1B81AE00DEB148 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
 		4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCard.swift; sourceTree = "<group>"; };
-		4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course​Design​CarouselView.swift"; sourceTree = "<group>"; };
 		4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCarouselView.swift; sourceTree = "<group>"; };
 		4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCourseCarouselView.swift; sourceTree = "<group>"; };
+		4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselView.swift; sourceTree = "<group>"; };
+		4BD84BCA2B1C7F79000AE51A /* CourseDesignCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDesignCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,9 +276,11 @@
 				4B9804412B1B3AA900DEB148 /* CategoriesSectionListView.swift */,
 				4B8658452B1BAE5300D01483 /* NewEpisodesCarouselView.swift */,
 				4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */,
-				4BD84BC12B1C6314000AE51A /* Course​Design​CarouselView.swift */,
+				4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */,
+				4BD84BCA2B1C7F79000AE51A /* CourseDesignCard.swift */,
 				4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */,
 				4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */,
+				4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,7 +367,6 @@
 		4B98044D2B1B71FF00DEB148 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				4B98044E2B1B727800DEB148 /* ChannelServiceable.swift */,
 				4B9804532B1B73DE00DEB148 /* HomeServiceable.swift */,
 			);
 			path = Protocol;
@@ -544,11 +547,11 @@
 				4B8658422B1BA4A200D01483 /* Utils.swift in Sources */,
 				4B9804492B1B50E200DEB148 /* NewEpisodes.swift in Sources */,
 				4B98042B2B1A6C6900DEB148 /* NetworkLogger.swift in Sources */,
+				4BD84BCB2B1C7F79000AE51A /* CourseDesignCard.swift in Sources */,
 				4B9804312B1A6CA300DEB148 /* EndPointType.swift in Sources */,
 				4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */,
 				4B9803EB2B1A686800DEB148 /* ViewController.swift in Sources */,
 				4B98044C2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift in Sources */,
-				4BD84BC22B1C6314000AE51A /* Course​Design​CarouselView.swift in Sources */,
 				4B98043A2B1B15AD00DEB148 /* Color+Ext.swift in Sources */,
 				4B86584C2B1BDBD700D01483 /* ChannelsViewModel.swift in Sources */,
 				4B9804422B1B3AA900DEB148 /* CategoriesSectionListView.swift in Sources */,
@@ -557,6 +560,7 @@
 				4B98041E2B1A69CD00DEB148 /* HomeView.swift in Sources */,
 				4B86583E2B1BA43F00D01483 /* Categories+stub.swift in Sources */,
 				4B9804382B1B159B00DEB148 /* Color.swift in Sources */,
+				4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */,
 				4B8658462B1BAE5300D01483 /* NewEpisodesCarouselView.swift in Sources */,
 				4B86584A2B1BCC3E00D01483 /* ImageCardView.swift in Sources */,
 				4B98042F2B1A6C9200DEB148 /* HTTPMethod.swift in Sources */,
@@ -568,8 +572,8 @@
 				4B9804542B1B73DE00DEB148 /* HomeServiceable.swift in Sources */,
 				4B9804332B1A6CCF00DEB148 /* NetworkEnvironment.swift in Sources */,
 				4B8658402B1BA45000D01483 /* Channels+stub.swift in Sources */,
+				4B10339D2B1C913E008EE486 /* ChannelSectionHeaderView.swift in Sources */,
 				4B9803E92B1A686800DEB148 /* SceneDelegate.swift in Sources */,
-				4B98044F2B1B727800DEB148 /* ChannelServiceable.swift in Sources */,
 				4B8658482B1BB40500D01483 /* NewEpisodesViewModel.swift in Sources */,
 				4B9804472B1B502A00DEB148 /* Channels.swift in Sources */,
 				4B98043E2B1B180500DEB148 /* NetworkMonitor.swift in Sources */,
@@ -759,8 +763,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -787,8 +790,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

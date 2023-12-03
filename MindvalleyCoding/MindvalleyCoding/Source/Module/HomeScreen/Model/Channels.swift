@@ -19,12 +19,14 @@ struct ChannelsData: Codable {
 }
 
 // MARK: - Channel
-struct Channels: Codable {
+struct Channels: Codable, Identifiable {
     let title: String?
     let series: [Series]?
     let mediaCount: Int?
     let latestMedia: [LatestMedia]?
-    let id: String?
+    var id: String {
+        title ?? ""
+    }
     let iconAsset: IconAsset?
     let coverAsset: CoverAsset?
     let slug: String?
@@ -53,10 +55,18 @@ struct IconAsset: Codable {
 }
 
 // MARK: - LatestMedia
-struct LatestMedia: Codable {
+struct LatestMedia: Codable, Identifiable {
+    var id: String {
+        title 
+    }
+    
     let type: TypeEnum
     let title: String
     let coverAsset: CoverAsset?
+    
+    var coverAssetURL: String {
+        coverAsset?.url ?? ""
+    }
 }
 
 enum TypeEnum: String, Codable {
@@ -74,4 +84,9 @@ struct Series: Codable, Identifiable {
     var coverAssetURL: String {
         coverAsset?.url ?? ""
     }
+}
+
+extension Channels {
+    
+    static let thumbnailImage = "https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com"
 }

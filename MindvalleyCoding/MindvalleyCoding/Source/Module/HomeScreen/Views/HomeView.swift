@@ -30,6 +30,7 @@ struct HomeView: View {
 //                            .padding(.leading, 16)
 //                            .padding(.bottom, 16)
                         NewEpisodesCarouselView(title: "New Episodes", movies: newApisodeViewModel.newApisodesArray)
+                        SeriesCourseCarouselView()
                         CategoriesSectionListView()
                         
                         //.border(.red, width: 5)

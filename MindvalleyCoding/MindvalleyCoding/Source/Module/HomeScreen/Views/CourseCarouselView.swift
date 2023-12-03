@@ -1,5 +1,5 @@
 //
-//  SeriesCarouselView.swift
+//  CourseCarouselView.swift
 //  MindvalleyCoding
 //
 //  Created by Shoeb Khan on 03/12/23.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct SeriesCarouselView: View {
-    private let channels: Channels?
+struct CourseCarouselView: View {
+  
+    private var channels: Channels?
     
-    init(channels: Channels?) {
-        self.channels = channels
+    init(latestMedias: Channels?) {
+        self.channels = latestMedias
     }
-    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            if let series = self.channels?.series, !series.isEmpty {
+            if let latestMedias = self.channels?.latestMedia, !latestMedias.isEmpty {
                 ChannelSectionHeaderView(channel: self.channels)
                     .padding(.horizontal, 10)
                     .padding(.bottom, 30)
@@ -25,14 +25,13 @@ struct SeriesCarouselView: View {
                     .font(.custom("Gilroy-Bold", size: 20))
                     .frame(maxWidth:.infinity, alignment: .topLeading)
                   
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
-                        ForEach(series) { serieModel in
-                            NewEpisodesCard(imageURL: serieModel.coverAssetURL,
-                                            footerTitle: serieModel.title ?? "", footerSubTitle: "",
-                                            imageWidth: 174, imageHeight: 380)
-                            .padding(.leading, serieModel.id == series.first?.id ? 16 : 0)
-                            .padding(.trailing, serieModel.id == series.last?.id ? 16 : 0)
+                        ForEach(latestMedias) { media in
+                           CourseDesignCard(media: media, imageWidth: 340, imageHeight: 270)
+                            .padding(.leading, media.id == latestMedias.first?.id ? 16 : 0)
+                            .padding(.trailing, media.id == latestMedias.last?.id ? 16 : 0)
                         }
                     }
                 }
@@ -40,13 +39,14 @@ struct SeriesCarouselView: View {
                     .frame(height: 1)
                     .overlay(.gray)
                     .padding([.leading,.trailing], 16)
-           }
+                
+            }
             
         }
     }
 }
 
 #Preview {
-    SeriesCarouselView(channels: ChannelsResponse.stubChannel)
-    .background(Color.homeScreenBackGroundColor)
+    CourseCarouselView(latestMedias: ChannelsResponse.stubChannel)
+        .background(Color.homeScreenBackGroundColor)
 }

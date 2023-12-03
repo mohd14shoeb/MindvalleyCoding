@@ -28,7 +28,7 @@ class ChannelsViewModel: ObservableObject {
         self.channelsArray = channelsArray
     }
     
-    func getNewEpisodesList() {
+    func getChannelSeriesAndCourseList() {
         self.networkManager.getAPI(decodabel: ChannelsResponse.self,
                                    homeApi: .getChannels) { [weak self] (response, error) in
             
