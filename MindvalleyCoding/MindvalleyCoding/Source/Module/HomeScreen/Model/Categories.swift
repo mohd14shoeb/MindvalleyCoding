@@ -24,3 +24,8 @@ struct Category: Codable, Identifiable {
     }
     let name: String?
 }
+
+extension CategoriesResponse {
+    
+    static let categoryTitle = "Browse by categories"
+}

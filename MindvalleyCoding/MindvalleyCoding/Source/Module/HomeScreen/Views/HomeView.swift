@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var newApisodeViewModel = NewEpisodesViewModel(networkManager: HomeServiceManager())
-    @StateObject private var categoryViewModel = CategoriesSectionViewModel(networkManager: HomeServiceManager())
-    @StateObject private var channelViewModel = ChannelsViewModel(networkManager: HomeServiceManager())
-    
-//    init() {
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor (Color.navigationTitleColor)]
-//    }
-//    
+    @ObservedObject private var newApisodeViewModel = NewEpisodesViewModel()
+    @ObservedObject private var categoryViewModel = CategoriesSectionViewModel()
+    @ObservedObject private var channelViewModel = ChannelsViewModel()
+ 
     var body: some View {
         NavigationView {
             ZStack {
@@ -23,30 +19,29 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        if let newEpisodes = newApisodeViewModel.newApisodesArray {
-                            titleView
-                            NewEpisodesGridLayoutView(title: "New Episodes", movies: newEpisodes, gridItemLayout: newApisodeViewModel.gridItemLayout)
+                        titleView
+                        if let newEpisodes = newApisodeViewModel.newApisodesArray, !newEpisodes.isEmpty {
+                            NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
+                                                      movies: newEpisodes,
+                                                      gridItemLayout: NewEpisodesResponse.gridItemLayout)
                         }
-                        if let channels = self.channelViewModel.channelsArray, !channels.isEmpty {
+                        if let channels = channelViewModel.channelsArray, !channels.isEmpty {
                             SeriesCourseCarouselView(channelsArray: channels)
                         }
-                        if let categories = categoryViewModel.categorySectionArray, !categories.isEmpty {
-                            CategoriesSectionListView(title: "Browse by categories", gridItemLayout: categoryViewModel.gridItemLayout, categorySectionArray: categories)
-                        }
-                    }
+                        if let categories = categoryViewModel.categories, !categories.isEmpty {
+                            CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
+                                                      gridItemLayout: CategoriesResponse.gridItemLayout,
+                                                      categories: categories)
+                        }                    }
                 }
                 //progressCircleView
             }
             .navigationBarTitle("")
             .navigationBarHidden(false)
            .preferredColorScheme(.dark)
-//            .navigationBarTitle("Channel", displayMode: .automatic).foregroundColor(.navigationTitleColor)
-            //.border(.yellow)
-            
+  
         }.task {
-            self.newApisodeViewModel.getNewEpisodesList()
-            self.channelViewModel.getChannelSeriesAndCourseList()
-            self.categoryViewModel.getCategoryList()
+            self.getAllAPICall()
         }
     }
     private var titleView: some View {
@@ -56,6 +51,14 @@ struct HomeView: View {
             .font(.custom("Gilroy-Bold", size: 24))
             .padding(.leading, 16)
             .padding(.bottom, 16)
+    }
+    func getAllAPICall() {
+        DispatchQueue.global().async {
+            self.newApisodeViewModel.getNewEpisodesList()
+            self.channelViewModel.getChannelSeriesAndCourseList()
+            self.categoryViewModel.getCategoryList()
+        }
+       
     }
 }
 

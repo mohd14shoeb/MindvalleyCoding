@@ -67,5 +67,131 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "548C3C7A-348E-42C5-A617-34BB8803A3A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Module/HomeScreen/ViewModel/ChannelsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getChannelSeriesAndCourseList()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "548C3C7A-348E-42C5-A617-34BB8803A3A1 - 59d12d46a0421670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;MindvalleyCoding.ChannelsResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in MindvalleyCoding.ChannelsViewModel.getChannelSeriesAndCourseList() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/ChannelsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "314">
+               </Location>
+               <Location
+                  uuid = "548C3C7A-348E-42C5-A617-34BB8803A3A1 - 59d12d46a0421670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;MindvalleyCoding.ChannelsResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in MindvalleyCoding.ChannelsViewModel.getChannelSeriesAndCourseList() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/ChannelsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "403">
+               </Location>
+               <Location
+                  uuid = "548C3C7A-348E-42C5-A617-34BB8803A3A1 - 59d12d46a04215f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;MindvalleyCoding.ChannelsResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in MindvalleyCoding.ChannelsViewModel.getChannelSeriesAndCourseList() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/ChannelsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "314">
+               </Location>
+               <Location
+                  uuid = "548C3C7A-348E-42C5-A617-34BB8803A3A1 - 59d12d46a04215f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;MindvalleyCoding.ChannelsResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in MindvalleyCoding.ChannelsViewModel.getChannelSeriesAndCourseList() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/ChannelsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "403">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B37346A-C0D5-4B87-99F9-3A95449B53FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Module/HomeScreen/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5872E03-550C-4CF2-8744-C382446E1FDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Module/HomeScreen/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B0EA045-BF2C-42C9-BC82-2A04C4BF6A74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Module/HomeScreen/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getAllAPICall()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

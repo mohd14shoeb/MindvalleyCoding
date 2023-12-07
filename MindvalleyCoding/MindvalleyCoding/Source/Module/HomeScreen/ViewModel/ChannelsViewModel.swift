@@ -12,33 +12,29 @@ class ChannelsViewModel: ObservableObject {
     
     // MARK: Private properties
     private let networkManager: HomeServiceable
-    private let group = DispatchGroup()
-    private var validStringChecker: AnyCancellable?
+//    private let group = DispatchGroup()
+//    private var validStringChecker: AnyCancellable?
     
     @Published var channelsArray: [Channels]?
     @Published var isLoadingShowing = false
-    
+    @Published var error = ""
     
     // MARK: Initilize property
-    init(networkManager: HomeServiceable,
-         validStringChecker: AnyCancellable? = nil,
-         channelsArray: [Channels]? = nil) {
+    init(networkManager: HomeServiceable = HomeServiceManager()) {
         self.networkManager = networkManager
-        self.validStringChecker = validStringChecker
-        self.channelsArray = channelsArray
     }
     
     func getChannelSeriesAndCourseList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: ChannelsResponse.self,
                                        homeApi: .getChannels) { [weak self] (response, error) in
-                
-                if error != nil {
-                    print(error)
+                DispatchQueue.main.async {
+                self?.isLoadingShowing = false
+                if let error = error, !error.isEmpty {
+                    self?.error = error
                 } else {
-                    DispatchQueue.main.async {
+                   
                         self?.channelsArray = response?.data.channels
-                        print(response)
                     }
                 }
             }

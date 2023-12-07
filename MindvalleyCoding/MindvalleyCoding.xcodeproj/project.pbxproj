@@ -59,6 +59,8 @@
 		4BF17F712B21B92500BF8768 /* NewEpisodesGridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F702B21B92500BF8768 /* NewEpisodesGridLayoutView.swift */; };
 		4BF17F732B21E4E800BF8768 /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F722B21E4E800BF8768 /* HomeDashboardView.swift */; };
 		4BF17F752B220D4600BF8768 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BF17F742B220D4600BF8768 /* Gilroy-Medium.ttf */; };
+		4BF17F772B22416100BF8768 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F762B22416100BF8768 /* LoadingIndicatorView.swift */; };
+		4BF17F792B22473700BF8768 /* HomeDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F782B22473700BF8768 /* HomeDashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,8 @@
 		4BF17F702B21B92500BF8768 /* NewEpisodesGridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesGridLayoutView.swift; sourceTree = "<group>"; };
 		4BF17F722B21E4E800BF8768 /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDashboardView.swift; sourceTree = "<group>"; };
 		4BF17F742B220D4600BF8768 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		4BF17F762B22416100BF8768 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		4BF17F782B22473700BF8768 /* HomeDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +372,7 @@
 				4B98044B2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift */,
 				4B8658472B1BB40500D01483 /* NewEpisodesViewModel.swift */,
 				4B86584B2B1BDBD700D01483 /* ChannelsViewModel.swift */,
+				4BF17F782B22473700BF8768 /* HomeDashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				4B8658492B1BCC3E00D01483 /* ImageCardView.swift */,
+				4BF17F762B22416100BF8768 /* LoadingIndicatorView.swift */,
 			);
 			path = CommonUIComponent;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF17F772B22416100BF8768 /* LoadingIndicatorView.swift in Sources */,
 				4B98042D2B1A6C7F00DEB148 /* HTTPTask.swift in Sources */,
 				4B9804452B1B4E2400DEB148 /* Categories.swift in Sources */,
 				4B8658442B1BA78500D01483 /* ReadingLocalFile.swift in Sources */,
@@ -578,6 +585,7 @@
 				4B98042F2B1A6C9200DEB148 /* HTTPMethod.swift in Sources */,
 				4B9804362B1A6F9F00DEB148 /* HomeApiEndPoints.swift in Sources */,
 				4B9804292B1A6C5200DEB148 /* Router.swift in Sources */,
+				4BF17F792B22473700BF8768 /* HomeDashboardViewModel.swift in Sources */,
 				4B86583C2B1BA42600D01483 /* NewEpisodes+stub.swift in Sources */,
 				4B9803E72B1A686800DEB148 /* AppDelegate.swift in Sources */,
 				4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */,

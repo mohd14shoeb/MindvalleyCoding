@@ -44,3 +44,7 @@ struct Channel: Codable {
     
 }
 
+
+extension NewEpisodesResponse {
+    static let newEpisodeTitle =  "New Episodes"
+}

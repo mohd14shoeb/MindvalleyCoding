@@ -13,40 +13,29 @@ class CategoriesSectionViewModel: ObservableObject {
     
    // MARK: Private properties
     private let networkManager: HomeServiceable
-    private let group = DispatchGroup()
-    private var validStringChecker: AnyCancellable?
-    //let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
-    let gridItemLayout: [GridItem]  = Array(repeating: .init(.flexible(), spacing: 13), count: 2)
-    
-    @Published var categorySectionArray: [Category]?
+   
+    @Published var categories: [Category]?
     @Published var isLoadingShowing = false
-    
+    @Published var error = ""
     
     // MARK: Initilize property
-    init(networkManager: HomeServiceable,
-         validStringChecker: AnyCancellable? = nil,
-         categorySectionArray: [Category]? = nil) {
+    init(networkManager: HomeServiceable = HomeServiceManager()) {
         self.networkManager = networkManager
-        self.validStringChecker = validStringChecker
-        self.categorySectionArray = categorySectionArray
     }
     
     func getCategoryList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: CategoriesResponse.self,
                                        homeApi: .Categories) { [weak self] (response, error) in
-                
-                if error != nil {
-                    print(error ?? "")
+                DispatchQueue.main.async {
+                self?.isLoadingShowing = false
+                if let error = error, !error.isEmpty {
+                    self?.error = error
                 } else {
-                    DispatchQueue.main.async {
-                        self?.categorySectionArray = response?.data?.categories
-                        //print(response)
+                        self?.categories = response?.data?.categories
                     }
                 }
             }
         }
-
     }
-    
 }

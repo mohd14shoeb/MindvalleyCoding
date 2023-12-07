@@ -45,7 +45,8 @@ struct NewEpisodesCard: View {
             .padding(.bottom, 6)
             Spacer()
         }
-        .frame(width: self.imageWidth, height:  self.imageHeight)
+        .frame(width: self.imageWidth)
+        .frame(minHeight: self.imageHeight, maxHeight: .infinity)
     }
 }
 

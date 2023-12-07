@@ -25,6 +25,7 @@ extension NewEpisodesResponse {
    static var gridItemLayout: [GridItem] {
         Array(repeating: .init(.flexible(), spacing: 13), count: 6)
     }
+    
 }
 
 

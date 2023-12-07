@@ -11,13 +11,13 @@ struct CategoriesSectionListView: View {
    
     private let title: String
     private let gridItemLayout: [GridItem]
-   private let categorySectionArray: [Category]
+   private let categories: [Category]
     
     init(title: String, gridItemLayout: [GridItem], 
-         categorySectionArray: [Category]) {
+         categories: [Category]) {
         self.title = title
         self.gridItemLayout = gridItemLayout
-        self.categorySectionArray = categorySectionArray
+        self.categories = categories
     }
    
     var body: some View {
@@ -30,7 +30,7 @@ struct CategoriesSectionListView: View {
         }
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(self.categorySectionArray) { category in
+                ForEach(self.categories) { category in
                     Text(category.name ?? "")
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.listSectionTitleColor).lineLimit(2)
@@ -49,6 +49,6 @@ struct CategoriesSectionListView: View {
 #Preview {
     CategoriesSectionListView(title: "Browse by categories", 
                               gridItemLayout: CategoriesResponse.gridItemLayout,
-                              categorySectionArray:
+                              categories:
                                 CategoriesResponse.stubbedCategorys)
 }

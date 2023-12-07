@@ -14,35 +14,30 @@ class NewEpisodesViewModel: ObservableObject {
     
     // MARK: Private properties
     private let networkManager: HomeServiceable
-    private let group = DispatchGroup()
-    private var validStringChecker: AnyCancellable?
+//    private let group = DispatchGroup()
+//    private var validStringChecker: AnyCancellable?
     
     @Published var newApisodesArray: [Media]?
-    @Published var isLoadingShowing = false
+    @Published var isLoadingShowing = true
+    @Published var error = ""
     
-     var gridItemLayout: [GridItem] =
-        Array(repeating: .init(.flexible(), spacing: 13), count: 6)
+     
    
     // MARK: Initilize property
-    init(networkManager: HomeServiceable,
-         validStringChecker: AnyCancellable? = nil,
-         newApisodesArray: [Media]? = nil) {
+    init(networkManager: HomeServiceable = HomeServiceManager()) {
         self.networkManager = networkManager
-        self.validStringChecker = validStringChecker
-        self.newApisodesArray = newApisodesArray
     }
     
     func getNewEpisodesList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
                                        homeApi: .getNewEpisodesList) { [weak self] (response, error) in
-                
-                if error != nil {
-                    print(error ?? "")
+                DispatchQueue.main.async {
+                self?.isLoadingShowing = false
+                if let error = error, !error.isEmpty {
+                    self?.error = error
                 } else {
-                    DispatchQueue.main.async {
                         self?.newApisodesArray = response?.data.media
-                        // print(response)
                     }
                 }
             }
@@ -50,3 +45,4 @@ class NewEpisodesViewModel: ObservableObject {
     }
     
 }
+

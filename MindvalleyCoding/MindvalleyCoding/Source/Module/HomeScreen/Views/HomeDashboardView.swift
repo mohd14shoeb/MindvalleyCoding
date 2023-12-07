@@ -8,35 +8,42 @@
 import SwiftUI
 
 struct HomeDashboardView: View {
-    @StateObject private var newApisodeViewModel = NewEpisodesViewModel(networkManager: HomeServiceManager())
-    @StateObject private var categoryViewModel = CategoriesSectionViewModel(networkManager: HomeServiceManager())
-    @StateObject private var channelViewModel = ChannelsViewModel(networkManager: HomeServiceManager())
+    @ObservedObject private var newApisodeViewModel = NewEpisodesViewModel()
+    @ObservedObject private var categoryViewModel = CategoriesSectionViewModel()
+    @ObservedObject private var channelViewModel = ChannelsViewModel()
     
     var body: some View {
-        ZStack {
-            Color.homeScreenBackGroundColor
-                .ignoresSafeArea()
-            Spacer(minLength: 20)
-            
-            ScrollView(.vertical) {
-                //  Spacer(minLength: 20)
-                titleView
-                
-                if let newEpisodes = newApisodeViewModel.newApisodesArray {
-                    NewEpisodesGridLayoutView(title: "New Episodes", movies: newEpisodes, gridItemLayout: newApisodeViewModel.gridItemLayout)
+        NavigationView {
+            ZStack {
+                Color.homeScreenBackGroundColor
+                    .ignoresSafeArea()
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        titleView
+                            .padding([.leading, .trailing], 14)
+                            
+                        if let newEpisodes = newApisodeViewModel.newApisodesArray, !newEpisodes.isEmpty {
+                            NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
+                                                      movies: newEpisodes,
+                                                      gridItemLayout: NewEpisodesResponse.gridItemLayout)
+                        }
+                        if let channels = channelViewModel.channelsArray, !channels.isEmpty {
+                            SeriesCourseCarouselView(channelsArray: channels)
+                        }
+                        if let categories = categoryViewModel.categories, !categories.isEmpty {
+                            CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
+                                                      gridItemLayout: CategoriesResponse.gridItemLayout,
+                                                      categories: categories)
+                        }                    }
                 }
-                if let channels = self.channelViewModel.channelsArray, !channels.isEmpty {
-                    SeriesCourseCarouselView(channelsArray: channels)
-                }
-                if let categories = categoryViewModel.categorySectionArray, !categories.isEmpty {
-                    CategoriesSectionListView(title: "Browse by categories", gridItemLayout: categoryViewModel.gridItemLayout, categorySectionArray: categories)
-                }
+                //progressCircleView
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(false)
+            .preferredColorScheme(.dark)
             
         }.task {
-            self.newApisodeViewModel.getNewEpisodesList()
-            self.channelViewModel.getChannelSeriesAndCourseList()
-            self.categoryViewModel.getCategoryList()
+            self.getAllAPICall()
         }
         
     }
@@ -46,8 +53,17 @@ struct HomeDashboardView: View {
             .frame(maxWidth:.infinity, alignment: .topLeading)
             .foregroundColor(Color.navigationTitleColor)
             .font(.custom("Gilroy-Bold", size: 24))
-            .padding(.leading, 16)
+        //.padding(.leading, 16)
             .padding(.bottom, 16)
+    }
+    
+    func getAllAPICall() {
+        DispatchQueue.global().async {
+            self.newApisodeViewModel.getNewEpisodesList()
+            self.channelViewModel.getChannelSeriesAndCourseList()
+            self.categoryViewModel.getCategoryList()
+        }
+        
     }
 }
 
