@@ -26,15 +26,15 @@ struct NewEpisodesCarouselView: View {
                     .padding(.bottom, 14)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 16) {
+                    LazyHStack(content: {
                         ForEach(movies) { movie in
                             NewEpisodesCard(imageURL: movie.mediaURL, footerTitle: movie.mediaTitle,
                                             footerSubTitle: movie.channelTitle,
                                             imageWidth: 174, imageHeight: 390)
-                                .padding(.leading, movie.id == self.movies?.first?.id ? 16 : 0)
-                                .padding(.trailing, movie.id == self.movies?.last?.id ? 16 : 0)
+                            .padding(.leading, movie.id == self.movies?.first?.id ? 16 : 0)
+                            .padding(.trailing, movie.id == self.movies?.last?.id ? 16 : 0)
                         }
-                    }
+                    })
                 }
                 Divider()
                     .frame(height: 1)

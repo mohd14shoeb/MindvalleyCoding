@@ -7,47 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8238F131-D36A-40A2-BBC4-92464E1B0D6C"
+            uuid = "375CDF47-0BD2-4B16-8260-F26CB9A79532"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MindvalleyCoding/Source/Module/HomeScreen/ViewModel/CategoriesSectionViewModel.swift"
+            filePath = "MindvalleyCoding/Source/Network/Service/Router.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "getCategoryList()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "request(_:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "8238F131-D36A-40A2-BBC4-92464E1B0D6C - d5904c7332af491e"
+                  uuid = "375CDF47-0BD2-4B16-8260-F26CB9A79532 - b81af68ad7d0f65"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;MindvalleyCoding.CategoriesResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in MindvalleyCoding.CategoriesSectionViewModel.getCategoryList() -&gt; ()"
+                  symbolName = "MindvalleyCoding.Router.request(_: &#x3c4;_0_0, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MindvalleyCoding"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/CategoriesSectionViewModel.swift"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Network/Service/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "104">
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "492">
                </Location>
                <Location
-                  uuid = "8238F131-D36A-40A2-BBC4-92464E1B0D6C - d5904c7332af491e"
+                  uuid = "375CDF47-0BD2-4B16-8260-F26CB9A79532 - b81af68ad7d0f04"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;MindvalleyCoding.CategoriesResponse&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in MindvalleyCoding.CategoriesSectionViewModel.getCategoryList() -&gt; ()"
+                  symbolName = "MindvalleyCoding.Router.request(_: &#x3c4;_0_0, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MindvalleyCoding"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/CategoriesSectionViewModel.swift"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Network/Service/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "160">
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "375CDF47-0BD2-4B16-8260-F26CB9A79532 - b81af68ad7d0ec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindvalleyCoding.Router.request(_: &#x3c4;_0_0, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Network/Service/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1225">
                </Location>
             </Locations>
          </BreakpointContent>

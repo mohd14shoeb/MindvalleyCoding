@@ -88,5 +88,5 @@ struct Series: Codable, Identifiable {
 
 extension Channels {
     
-    static let thumbnailImage = "https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com"
+    static let thumbnailImage = "https://assets.mindvalley.com/api/v1/assets/eb493421-c048-492b-a471-bed7604e95d6.jpg?transform=w_1080123" //https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com"
 }

@@ -20,12 +20,7 @@ struct CourseCarouselView: View {
             if let latestMedias = self.channels?.latestMedia, !latestMedias.isEmpty {
                 ChannelSectionHeaderView(channel: self.channels)
                     .padding(.horizontal, 10)
-                    .padding(.bottom, 30)
-                    .foregroundColor(Color.newApisodesTitleColor)
-                    .font(.custom("Gilroy-Bold", size: 20))
-                    .frame(maxWidth:.infinity, alignment: .topLeading)
-                  
-                
+                    .padding([.top,.bottom], 20)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(latestMedias) { media in
@@ -38,7 +33,7 @@ struct CourseCarouselView: View {
                 Divider()
                     .frame(height: 1)
                     .overlay(.gray)
-                    .padding([.leading,.trailing], 16)
+                    .padding([.leading,.trailing, .top], 16)
                 
             }
             

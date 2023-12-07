@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension CategoriesResponse {
     
@@ -15,6 +16,10 @@ extension CategoriesResponse {
     }
     static var stubCategory: Category? {
         return stubbedCategorys.first
+    }
+    
+    static var gridItemLayout: [GridItem]  {
+        Array(repeating: .init(.flexible(), spacing: 13), count: 2)
     }
 }
 

@@ -33,19 +33,16 @@ struct NewEpisodesCard: View {
                 .padding(.bottom, 8)
             Group {
                 Text(footerTitle ?? "")
-                    .frame(maxWidth:.infinity, alignment: .topLeading)
                     .foregroundColor(Color.listSectionTitleColor)
-                    .font(.custom("Gilroy-Regular", size: 17))
-                    .padding(.bottom, 8)
-                Text(footerSubTitle ?? "")
-                    .frame(maxWidth:.infinity, alignment: .topLeading)
+                    .font(.custom("Gilroy-Bold", size: 18))
+                    .padding(.bottom, 6)
+                Text(footerSubTitle?.uppercased() ?? "")
                     .foregroundColor(Color.newApisodesTitleColor)
-                    .font(.custom("Gilroy-Regular", size: 13))
-                
-                    
+                    .font(.custom("Gilroy-Bold", size: 14))
             }
+            .frame(maxWidth:.infinity, alignment: .topLeading)
             .padding([.leading, .trailing], 4)
-            .padding(.bottom, 8)
+            .padding(.bottom, 6)
             Spacer()
         }
         .frame(width: self.imageWidth, height:  self.imageHeight)
@@ -57,4 +54,5 @@ struct NewEpisodesCard: View {
                     footerTitle: NewEpisodesResponse.stubNewEpisode.mediaTitle,
                     footerSubTitle: NewEpisodesResponse.stubNewEpisode.channelTitle,
                     imageWidth: 174, imageHeight: 380)
+    .background(Color.homeScreenBackGroundColor)
 }

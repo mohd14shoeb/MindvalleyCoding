@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct SeriesCourseCarouselView: View {
-    @StateObject private var channelViewModel = ChannelsViewModel(networkManager: HomeServiceManager())
+    private let channelsArray: [Channels]
+    
+    init(channelsArray: [Channels]) {
+        self.channelsArray = channelsArray
+    }
     
     var body: some View {
         VStack() {
-            if let channels = channelViewModel.channelsArray, !channels.isEmpty {
-                
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 16) {
-                        ForEach(channels) { channel in
+                        ForEach(self.channelsArray ) { channel in
                             if let series = channel.series, !series.isEmpty {
                                 SeriesCarouselView(channels: channel)
                             } else {
@@ -25,13 +27,10 @@ struct SeriesCourseCarouselView: View {
                         }
                     }
                 }
-            }
-        }.task {
-            self.channelViewModel.getChannelSeriesAndCourseList()
         }
     }
 }
 
 #Preview {
-    SeriesCourseCarouselView().background(Color.homeScreenBackGroundColor)
+    SeriesCourseCarouselView(channelsArray: ChannelsResponse.stubChannels).background(Color.homeScreenBackGroundColor)
 }

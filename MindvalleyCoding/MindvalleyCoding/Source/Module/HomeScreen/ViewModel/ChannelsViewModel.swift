@@ -29,15 +29,17 @@ class ChannelsViewModel: ObservableObject {
     }
     
     func getChannelSeriesAndCourseList() {
-        self.networkManager.getAPI(decodabel: ChannelsResponse.self,
-                                   homeApi: .getChannels) { [weak self] (response, error) in
-            
-            if error != nil {
-                print(error)
-            } else {
-                DispatchQueue.main.async {
-                    self?.channelsArray = response?.data.channels
-                    print(response)
+        DispatchQueue.global().async {
+            self.networkManager.getAPI(decodabel: ChannelsResponse.self,
+                                       homeApi: .getChannels) { [weak self] (response, error) in
+                
+                if error != nil {
+                    print(error)
+                } else {
+                    DispatchQueue.main.async {
+                        self?.channelsArray = response?.data.channels
+                        print(response)
+                    }
                 }
             }
         }

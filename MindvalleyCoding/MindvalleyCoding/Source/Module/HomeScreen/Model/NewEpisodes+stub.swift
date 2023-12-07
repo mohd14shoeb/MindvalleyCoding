@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension NewEpisodesResponse {
     
@@ -19,6 +20,10 @@ extension NewEpisodesResponse {
     
     static var stubNewEpisodeURL: String {
         return stubNewEpisode.coverAsset?.url ?? ""
+    }
+    
+   static var gridItemLayout: [GridItem] {
+        Array(repeating: .init(.flexible(), spacing: 13), count: 6)
     }
 }
 

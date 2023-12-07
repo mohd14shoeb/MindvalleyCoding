@@ -15,7 +15,8 @@ class CategoriesSectionViewModel: ObservableObject {
     private let networkManager: HomeServiceable
     private let group = DispatchGroup()
     private var validStringChecker: AnyCancellable?
-    var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    //let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    let gridItemLayout: [GridItem]  = Array(repeating: .init(.flexible(), spacing: 13), count: 2)
     
     @Published var categorySectionArray: [Category]?
     @Published var isLoadingShowing = false
@@ -31,18 +32,21 @@ class CategoriesSectionViewModel: ObservableObject {
     }
     
     func getCategoryList() {
-        self.networkManager.getAPI(decodabel: CategoriesResponse.self,
-                                   homeApi: .Categories) { [weak self] (response, error) in
-            
-            if error != nil {
-                print(error ?? "")
-            } else {
-                DispatchQueue.main.async {
-                    self?.categorySectionArray = response?.data?.categories
-                    //print(response)
+        DispatchQueue.global().async {
+            self.networkManager.getAPI(decodabel: CategoriesResponse.self,
+                                       homeApi: .Categories) { [weak self] (response, error) in
+                
+                if error != nil {
+                    print(error ?? "")
+                } else {
+                    DispatchQueue.main.async {
+                        self?.categorySectionArray = response?.data?.categories
+                        //print(response)
+                    }
                 }
             }
         }
+
     }
     
 }

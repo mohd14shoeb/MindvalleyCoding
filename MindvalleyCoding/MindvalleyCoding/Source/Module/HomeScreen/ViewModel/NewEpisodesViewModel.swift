@@ -20,7 +20,9 @@ class NewEpisodesViewModel: ObservableObject {
     @Published var newApisodesArray: [Media]?
     @Published var isLoadingShowing = false
     
-    
+     var gridItemLayout: [GridItem] =
+        Array(repeating: .init(.flexible(), spacing: 13), count: 6)
+   
     // MARK: Initilize property
     init(networkManager: HomeServiceable,
          validStringChecker: AnyCancellable? = nil,
@@ -31,15 +33,17 @@ class NewEpisodesViewModel: ObservableObject {
     }
     
     func getNewEpisodesList() {
-        self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
-                                   homeApi: .getNewEpisodesList) { [weak self] (response, error) in
-            
-            if error != nil {
-                print(error ?? "")
-            } else {
-                DispatchQueue.main.async {
-                    self?.newApisodesArray = response?.data.media
-                   // print(response)
+        DispatchQueue.global().async {
+            self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
+                                       homeApi: .getNewEpisodesList) { [weak self] (response, error) in
+                
+                if error != nil {
+                    print(error ?? "")
+                } else {
+                    DispatchQueue.main.async {
+                        self?.newApisodesArray = response?.data.media
+                        // print(response)
+                    }
                 }
             }
         }

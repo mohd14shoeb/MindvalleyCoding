@@ -20,11 +20,7 @@ struct SeriesCarouselView: View {
             if let series = self.channels?.series, !series.isEmpty {
                 ChannelSectionHeaderView(channel: self.channels)
                     .padding(.horizontal, 10)
-                    .padding(.bottom, 30)
-                    .foregroundColor(Color.newApisodesTitleColor)
-                    .font(.custom("Gilroy-Bold", size: 20))
-                    .frame(maxWidth:.infinity, alignment: .topLeading)
-                  
+                    .padding([.top,.bottom], 20)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(series) { serieModel in

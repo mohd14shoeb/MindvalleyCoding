@@ -19,7 +19,7 @@ struct NewEpisodesData: Codable {
 
 // MARK: - Media
 struct Media: Codable, Identifiable {
-    
+
     let type, title: String?
     let coverAsset: CoverAsset?
     let channel: Channel?
@@ -36,7 +36,6 @@ struct Media: Codable, Identifiable {
     var channelTitle: String {
         channel?.title ?? ""
     }
-    
 }
 
 // MARK: - Channel

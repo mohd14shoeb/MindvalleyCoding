@@ -27,7 +27,7 @@ struct CourseDesignCard: View {
             Text(self.media?.title ?? "")
                 .frame(maxWidth:.infinity, alignment: .topLeading)
                 .foregroundColor(Color.listSectionTitleColor)
-                .font(.custom("Gilroy-Regular", size: 17))
+                .font(.custom("Gilroy-Bold", size: 18))
                 .padding([.leading, .trailing], 4)
                 .padding(.bottom, 8)
             Spacer()
