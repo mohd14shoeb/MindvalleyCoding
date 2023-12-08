@@ -32,7 +32,7 @@ struct NewEpisodesCard: View {
                           imageWidth: 174, imageHeight: 280)
                 .padding(.bottom, 8)
             Group {
-                Text(footerTitle ?? "")
+                Text(footerTitle ?? "").minimumScaleFactor(0.01)
                     .foregroundColor(Color.listSectionTitleColor)
                     .font(.custom("Gilroy-Bold", size: 18))
                     .padding(.bottom, 6)

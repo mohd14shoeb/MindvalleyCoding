@@ -27,7 +27,7 @@ struct SeriesCarouselView: View {
                         ForEach(series) { serieModel in
                             NewEpisodesCard(imageURL: serieModel.coverAssetURL,
                                             footerTitle: serieModel.title ?? "", footerSubTitle: "",
-                                            imageWidth: 174, imageHeight: 380)
+                                            imageWidth: 174, imageHeight: 400)
                             .padding(.leading, serieModel.id == series.first?.id ? 16 : 0)
                             .padding(.trailing, serieModel.id == series.last?.id ? 16 : 0)
                         }

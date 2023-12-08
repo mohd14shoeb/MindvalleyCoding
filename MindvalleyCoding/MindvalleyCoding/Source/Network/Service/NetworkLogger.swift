@@ -11,6 +11,8 @@ class NetworkLogger {
 
     // MARK: Static NetworkLogger for URLRequest
     static func log(request: URLRequest) {
+#if DEBUG
+       
         print("\n - - - - - - - - - - OUTGOING Request - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
 
@@ -35,10 +37,12 @@ class NetworkLogger {
             logOutput += "\n \(NSString(data: body, encoding: String.Encoding.utf8.rawValue) ?? "")"
         }
         print(logOutput)
+#endif
     }
 
     // MARK: Static NetworkLogger for URLResponse
     static func log(responseData data: Data?, response: URLResponse?, error: Error?) {
+#if DEBUG
       //  print("\n - - - - - - - - - - INCOMING Response - - - - - - - - - - \n")
       //  defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
         guard let data = data else {
@@ -50,12 +54,15 @@ class NetworkLogger {
             print("responseData: \(String(describing: dataDict))")
 
         }
+#endif
     }
 
     // MARK: Static NetworkLogger for Error
     static func log(error: Error) {
+#if DEBUG
         print("\n - - - - - - - - - - INCOMING Error - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
         print("\(error)")
+#endif
     }
 }

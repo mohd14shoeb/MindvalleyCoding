@@ -34,8 +34,8 @@ struct HomeServiceManager: HomeServiceable {
     func getAPI<T>(decodabel: T.Type,
                    homeApi: HomeApiEndPoints,
                    completion: @escaping (T?, String?) -> Void) where T: Decodable {
-        router.request(homeApi) { data, response, error in
-
+        router.request(homeApi, isCacheEnable: true) { data, response, error in
+            
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)
                 switch result {

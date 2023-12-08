@@ -33,7 +33,6 @@ class ChannelsViewModel: ObservableObject {
                 if let error = error, !error.isEmpty {
                     self?.error = error
                 } else {
-                   
                         self?.channelsArray = response?.data.channels
                     }
                 }

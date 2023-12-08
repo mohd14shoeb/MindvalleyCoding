@@ -42,7 +42,8 @@ struct HomeDashboardView: View {
             .navigationBarHidden(false)
             .preferredColorScheme(.dark)
             
-        }.task {
+        }.navigationViewStyle(StackNavigationViewStyle())
+        .task {
             self.getAllAPICall()
         }
         
@@ -53,7 +54,6 @@ struct HomeDashboardView: View {
             .frame(maxWidth:.infinity, alignment: .topLeading)
             .foregroundColor(Color.navigationTitleColor)
             .font(.custom("Gilroy-Bold", size: 24))
-        //.padding(.leading, 16)
             .padding(.bottom, 16)
     }
     
