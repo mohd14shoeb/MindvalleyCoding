@@ -27,7 +27,7 @@ struct ImageCardView: View {
                     url: self.imageURL,
                     placeholder: {
                         ZStack {
-                            Color.yellow.opacity(0.8)
+                            Color.gray.opacity(1.0)
                             ProgressView()
                         }
                     },
@@ -35,6 +35,18 @@ struct ImageCardView: View {
                         Image(uiImage: $0)
                             .resizable()
                             .scaledToFill()
+                    },
+                    error: { error in
+                        ZStack {
+                            Color.gray.opacity(1.0)
+                            VStack {
+                                Text("No Image")
+                                    .foregroundColor(Color.white)
+                                    .font(.custom("Gilroy-Regular", size: 16))
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
+                        
                     }
                 )
             }

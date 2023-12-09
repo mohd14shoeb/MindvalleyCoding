@@ -27,7 +27,7 @@ class ChannelsViewModel: ObservableObject {
     func getChannelSeriesAndCourseList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: ChannelsResponse.self,
-                                       homeApi: .getChannels) { [weak self] (response, error) in
+                                       homeApi: .getChannels, isCacheEnable: true) { [weak self] (response, error) in
                 DispatchQueue.main.async {
                 self?.isLoadingShowing = false
                 if let error = error, !error.isEmpty {

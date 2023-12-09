@@ -40,7 +40,8 @@ struct HomeView: View {
             .navigationBarHidden(false)
            .preferredColorScheme(.dark)
   
-        }.task {
+        }.navigationViewStyle(StackNavigationViewStyle())
+        .task {
             self.getAllAPICall()
         }
     }

@@ -31,7 +31,7 @@ class NewEpisodesViewModel: ObservableObject {
     func getNewEpisodesList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
-                                       homeApi: .getNewEpisodesList) { [weak self] (response, error) in
+                                       homeApi: .getNewEpisodesList, isCacheEnable: true) { [weak self] (response, error) in
                 DispatchQueue.main.async {
                 self?.isLoadingShowing = false
                 if let error = error, !error.isEmpty {

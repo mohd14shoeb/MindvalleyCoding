@@ -18,6 +18,7 @@
 		4B8658482B1BB40500D01483 /* NewEpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8658472B1BB40500D01483 /* NewEpisodesViewModel.swift */; };
 		4B86584A2B1BCC3E00D01483 /* ImageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8658492B1BCC3E00D01483 /* ImageCardView.swift */; };
 		4B86584C2B1BDBD700D01483 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86584B2B1BDBD700D01483 /* ChannelsViewModel.swift */; };
+		4B8FEBD82B23A7FA002F960F /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FEBD72B23A7FA002F960F /* ImageCompressor.swift */; };
 		4B9803E72B1A686800DEB148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9803E62B1A686800DEB148 /* AppDelegate.swift */; };
 		4B9803E92B1A686800DEB148 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9803E82B1A686800DEB148 /* SceneDelegate.swift */; };
 		4B9803EB2B1A686800DEB148 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9803EA2B1A686800DEB148 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */; };
 		4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */; };
 		4BD84BCB2B1C7F79000AE51A /* CourseDesignCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BCA2B1C7F79000AE51A /* CourseDesignCard.swift */; };
+		4BE498892B24745000B9C0D0 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE498882B24744F00B9C0D0 /* DividerView.swift */; };
 		4BF17F712B21B92500BF8768 /* NewEpisodesGridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F702B21B92500BF8768 /* NewEpisodesGridLayoutView.swift */; };
 		4BF17F732B21E4E800BF8768 /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF17F722B21E4E800BF8768 /* HomeDashboardView.swift */; };
 		4BF17F752B220D4600BF8768 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BF17F742B220D4600BF8768 /* Gilroy-Medium.ttf */; };
@@ -91,6 +93,7 @@
 		4B8658472B1BB40500D01483 /* NewEpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesViewModel.swift; sourceTree = "<group>"; };
 		4B8658492B1BCC3E00D01483 /* ImageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardView.swift; sourceTree = "<group>"; };
 		4B86584B2B1BDBD700D01483 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		4B8FEBD72B23A7FA002F960F /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
 		4B9803E32B1A686800DEB148 /* MindvalleyCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindvalleyCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9803E62B1A686800DEB148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B9803E82B1A686800DEB148 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCourseCarouselView.swift; sourceTree = "<group>"; };
 		4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselView.swift; sourceTree = "<group>"; };
 		4BD84BCA2B1C7F79000AE51A /* CourseDesignCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDesignCard.swift; sourceTree = "<group>"; };
+		4BE498882B24744F00B9C0D0 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		4BF17F702B21B92500BF8768 /* NewEpisodesGridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesGridLayoutView.swift; sourceTree = "<group>"; };
 		4BF17F722B21E4E800BF8768 /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDashboardView.swift; sourceTree = "<group>"; };
 		4BF17F742B220D4600BF8768 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 			children = (
 				4B8658412B1BA4A200D01483 /* Utils.swift */,
 				4B8658432B1BA78500D01483 /* ReadingLocalFile.swift */,
+				4B8FEBD72B23A7FA002F960F /* ImageCompressor.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 			children = (
 				4B8658492B1BCC3E00D01483 /* ImageCardView.swift */,
 				4BF17F762B22416100BF8768 /* LoadingIndicatorView.swift */,
+				4BE498882B24744F00B9C0D0 /* DividerView.swift */,
 			);
 			path = CommonUIComponent;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				4B98043A2B1B15AD00DEB148 /* Color+Ext.swift in Sources */,
 				4B86584C2B1BDBD700D01483 /* ChannelsViewModel.swift in Sources */,
 				4B9804422B1B3AA900DEB148 /* CategoriesSectionListView.swift in Sources */,
+				4BE498892B24745000B9C0D0 /* DividerView.swift in Sources */,
 				4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */,
 				4B9804522B1B730500DEB148 /* HomeServiceManager.swift in Sources */,
 				4B98041E2B1A69CD00DEB148 /* HomeView.swift in Sources */,
@@ -590,6 +597,7 @@
 				4B9803E72B1A686800DEB148 /* AppDelegate.swift in Sources */,
 				4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */,
 				4B9804542B1B73DE00DEB148 /* HomeServiceable.swift in Sources */,
+				4B8FEBD82B23A7FA002F960F /* ImageCompressor.swift in Sources */,
 				4B9804332B1A6CCF00DEB148 /* NetworkEnvironment.swift in Sources */,
 				4B8658402B1BA45000D01483 /* Channels+stub.swift in Sources */,
 				4B10339D2B1C913E008EE486 /* ChannelSectionHeaderView.swift in Sources */,

@@ -36,10 +36,7 @@ struct NewEpisodesCarouselView: View {
                         }
                     })
                 }
-                Divider()
-                    .frame(height: 1)
-                    .overlay(.gray)
-                    .padding([.leading,.trailing], 16)
+                DividerView(height: 1.0, color: Color.dividerColor, padding: 16)
             }
         }
         

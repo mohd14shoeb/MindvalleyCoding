@@ -32,9 +32,9 @@ struct HomeServiceManager: HomeServiceable {
 
     // MARK: Genric get API
     func getAPI<T>(decodabel: T.Type,
-                   homeApi: HomeApiEndPoints,
+                   homeApi: HomeApiEndPoints, isCacheEnable: Bool = false,
                    completion: @escaping (T?, String?) -> Void) where T: Decodable {
-        router.request(homeApi, isCacheEnable: true) { data, response, error in
+        router.request(homeApi, isCacheEnable: isCacheEnable) { data, response, error in
             
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)

@@ -26,7 +26,7 @@ class CategoriesSectionViewModel: ObservableObject {
     func getCategoryList() {
         DispatchQueue.global().async {
             self.networkManager.getAPI(decodabel: CategoriesResponse.self,
-                                       homeApi: .Categories) { [weak self] (response, error) in
+                                       homeApi: .Categories, isCacheEnable: true) { [weak self] (response, error) in
                 DispatchQueue.main.async {
                 self?.isLoadingShowing = false
                 if let error = error, !error.isEmpty {

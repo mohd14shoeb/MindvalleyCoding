@@ -10,7 +10,7 @@ import Foundation
 // MARK: protocol HomeServiceable
 protocol HomeServiceable {
     func getAPI<T: Decodable>(decodabel: T.Type,
-                              homeApi: HomeApiEndPoints,
+                              homeApi: HomeApiEndPoints, isCacheEnable: Bool,
                               completion: @escaping (_ response: T?,
                                                     _ error: String?) -> Void)
 }
