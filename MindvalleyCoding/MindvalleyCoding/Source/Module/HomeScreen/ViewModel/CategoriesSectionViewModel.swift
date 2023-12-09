@@ -9,22 +9,22 @@ import Foundation
 import Combine
 import SwiftUI
 
-@Observable
 class CategoriesSectionViewModel: ObservableObject {
     
     // MARK: Private properties
     private let networkManager: HomeServiceable
     
-    var categories: [Category]?
-    var isLoadingShowing = false
-    var error = ""
+    @Published  var categories: [Category]?
+    @Published  var isLoadingShowing = false
+    @Published  var error = ""
     
     // MARK: Initilize property
     init(networkManager: HomeServiceable = HomeServiceManager()) {
         self.networkManager = networkManager
     }
     
-    func getCategoryList() {
+    func getCategoryList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: CategoriesResponse.self,
                                    homeApi: .Categories, isCacheEnable: true) { [weak self] (response, error) in
             DispatchQueue.main.async {
@@ -34,6 +34,7 @@ class CategoriesSectionViewModel: ObservableObject {
                 } else {
                     self?.categories = response?.data?.categories
                 }
+                completion(self?.isLoadingShowing, error)
             }
         }
     }

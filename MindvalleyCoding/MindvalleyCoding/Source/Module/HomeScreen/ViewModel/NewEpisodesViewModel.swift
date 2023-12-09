@@ -10,14 +10,14 @@ import Foundation
 import Combine
 import SwiftUI
 
-@Observable
+
 class NewEpisodesViewModel: ObservableObject {
     
     // MARK: Private properties
     private let networkManager: HomeServiceable
-    var newApisodesArray: [Media]?
-    var isLoadingShowing = true
-    var error = ""
+    @Published  var newApisodesArray: [Media]?
+    @Published var isLoadingShowing = true
+    @Published var error = ""
     
     
     
@@ -26,7 +26,8 @@ class NewEpisodesViewModel: ObservableObject {
         self.networkManager = networkManager
     }
     
-    func getNewEpisodesList() {
+    func getNewEpisodesList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                   _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
                                    homeApi: .getNewEpisodesList, isCacheEnable: true) { [weak self] (response, error) in
             DispatchQueue.main.async {
@@ -36,6 +37,7 @@ class NewEpisodesViewModel: ObservableObject {
                 } else {
                     self?.newApisodesArray = response?.data.media
                 }
+                completion(self?.isLoadingShowing, error)
             }
         }
     }

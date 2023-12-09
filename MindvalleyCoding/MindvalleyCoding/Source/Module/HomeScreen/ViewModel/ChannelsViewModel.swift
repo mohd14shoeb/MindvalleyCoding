@@ -8,21 +8,21 @@
 import Foundation
 import Combine
 
-@Observable
 class ChannelsViewModel: ObservableObject {
     
     // MARK: Private properties
     private let networkManager: HomeServiceable
-    var channelsArray: [Channels]?
-    var isLoadingShowing = false
-    var error = ""
+    @Published  var channelsArray: [Channels]?
+    @Published var isLoadingShowing = false
+    @Published var error = ""
     
     // MARK: Initilize property
     init(networkManager: HomeServiceable = HomeServiceManager()) {
         self.networkManager = networkManager
     }
     
-    func getChannelSeriesAndCourseList() {
+    func getChannelSeriesAndCourseList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                               _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: ChannelsResponse.self,
                                    homeApi: .getChannels, isCacheEnable: true) { [weak self] (response, error) in
             DispatchQueue.main.async {
@@ -32,6 +32,7 @@ class ChannelsViewModel: ObservableObject {
                 } else {
                     self?.channelsArray = response?.data.channels
                 }
+                completion(self?.isLoadingShowing, error)
             }
         }
     }

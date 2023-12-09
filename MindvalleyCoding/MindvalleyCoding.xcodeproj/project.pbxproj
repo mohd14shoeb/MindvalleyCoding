@@ -412,11 +412,19 @@
 		4BD84BC72B1C7494000AE51A /* CommonUIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				4BE4988D2B24B9EA00B9C0D0 /* SwiftUIView */,
+			);
+			path = CommonUIComponent;
+			sourceTree = "<group>";
+		};
+		4BE4988D2B24B9EA00B9C0D0 /* SwiftUIView */ = {
+			isa = PBXGroup;
+			children = (
 				4B8658492B1BCC3E00D01483 /* ImageCardView.swift */,
 				4BF17F762B22416100BF8768 /* LoadingIndicatorView.swift */,
 				4BE498882B24744F00B9C0D0 /* DividerView.swift */,
 			);
-			path = CommonUIComponent;
+			path = SwiftUIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

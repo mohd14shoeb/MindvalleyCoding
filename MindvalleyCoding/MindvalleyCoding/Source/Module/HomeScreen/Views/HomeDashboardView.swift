@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct HomeDashboardView: View {
-    @ObservedObject private var newApisodeViewModel = NewEpisodesViewModel()
-    @ObservedObject private var categoryViewModel = CategoriesSectionViewModel()
-    @ObservedObject private var channelViewModel = ChannelsViewModel()
+    @StateObject private var ViewModel = 
+    HomeDashboardViewModel(networkManager: HomeServiceManager())
     
     var body: some View {
         NavigationView {
@@ -19,32 +18,45 @@ struct HomeDashboardView: View {
                     .ignoresSafeArea()
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        titleView
-                            .padding([.leading, .trailing], 14)
-                            
-                        if let newEpisodes = newApisodeViewModel.newApisodesArray, !newEpisodes.isEmpty {
-                            NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
-                                                      movies: newEpisodes,
-                                                      gridItemLayout: NewEpisodesResponse.gridItemLayout)
+                            if ViewModel.isLoadingShowing {
+                                LoadingIndicatorView(isLoading: ViewModel.isLoadingShowing,
+                                                     error: ViewModel.error) {
+                                    self.getAllAPICall()
+                                }.position(x: CGFloat(Int(UIScreen.main.bounds.size.width) / 2),
+                                           y: CGFloat(Int(UIScreen.main.bounds.size.height) / 2) - 100)
+                            } else {
+                                titleView
+                                    .padding([.leading, .trailing], 14)
+                                if let newEpisodes = ViewModel.viewModelNewEpisodes.newApisodesArray,
+                                    !newEpisodes.isEmpty {
+                                    NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
+                                                              movies: newEpisodes,
+                                                              gridItemLayout: NewEpisodesResponse.gridItemLayout)
+                                }
+                                if let channels = ViewModel.viewModelChannels.channelsArray,
+                                    !channels.isEmpty {
+                                    SeriesCourseCarouselView(channelsArray: channels)
+                                }
+                                if let categories = ViewModel.viewModelCategories.categories,
+                                    !categories.isEmpty {
+                                    CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
+                                                              gridItemLayout: CategoriesResponse.gridItemLayout,
+                                                              categories: categories)
+                                }
+                            }
                         }
-                        if let channels = channelViewModel.channelsArray, !channels.isEmpty {
-                            SeriesCourseCarouselView(channelsArray: channels)
-                        }
-                        if let categories = categoryViewModel.categories, !categories.isEmpty {
-                            CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
-                                                      gridItemLayout: CategoriesResponse.gridItemLayout,
-                                                      categories: categories)
-                        }                    }
                 }
-                //progressCircleView
             }
             .navigationBarTitle("")
             .navigationBarHidden(false)
             .preferredColorScheme(.dark)
             
         }.navigationViewStyle(StackNavigationViewStyle())
+            .onAppear() {
+                self.getAllAPICall()
+            }
         .task {
-            self.getAllAPICall()
+            
         }
         
     }
@@ -58,12 +70,7 @@ struct HomeDashboardView: View {
     }
     
     func getAllAPICall() {
-        DispatchQueue.global().async {
-            self.newApisodeViewModel.getNewEpisodesList()
-            self.channelViewModel.getChannelSeriesAndCourseList()
-            self.categoryViewModel.getCategoryList()
-        }
-        
+        self.ViewModel.fetchHomeDashboardResponse()
     }
 }
 
