@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject private var newApisodeViewModel = NewEpisodesViewModel()
-    @ObservedObject private var categoryViewModel = CategoriesSectionViewModel()
-    @ObservedObject private var channelViewModel = ChannelsViewModel()
- 
+
+    @StateObject private var ViewModel = HomeDashboardViewModel(networkManager: HomeServiceManager())
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -20,15 +19,15 @@ struct HomeView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         titleView
-                        if let newEpisodes = newApisodeViewModel.newApisodesArray, !newEpisodes.isEmpty {
+                        if let newEpisodes = ViewModel.viewModelNewEpisodes.newApisodesArray, !newEpisodes.isEmpty {
                             NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
                                                       movies: newEpisodes,
                                                       gridItemLayout: NewEpisodesResponse.gridItemLayout)
                         }
-                        if let channels = channelViewModel.channelsArray, !channels.isEmpty {
+                        if let channels = ViewModel.viewModelChannels.channelsArray, !channels.isEmpty {
                             SeriesCourseCarouselView(channelsArray: channels)
                         }
-                        if let categories = categoryViewModel.categories, !categories.isEmpty {
+                        if let categories = ViewModel.viewModelCategories.categories, !categories.isEmpty {
                             CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
                                                       gridItemLayout: CategoriesResponse.gridItemLayout,
                                                       categories: categories)
@@ -54,12 +53,7 @@ struct HomeView: View {
             .padding(.bottom, 16)
     }
     func getAllAPICall() {
-        DispatchQueue.global().async {
-            self.newApisodeViewModel.getNewEpisodesList()
-            self.channelViewModel.getChannelSeriesAndCourseList()
-            self.categoryViewModel.getCategoryList()
-        }
-       
+            self.ViewModel.fetchDataForViewModels()
     }
 }
 

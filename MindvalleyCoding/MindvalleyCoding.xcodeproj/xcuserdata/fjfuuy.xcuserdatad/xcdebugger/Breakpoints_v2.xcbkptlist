@@ -3,4 +3,84 @@
    uuid = "FB75EAC3-84D7-4A2A-8EBF-BE23FE1D5460"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCEA898D-5BC8-4C47-BB4D-1AEEEE99AEDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Module/HomeScreen/ViewModel/HomeDashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchDataForViewModels()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FCEA898D-5BC8-4C47-BB4D-1AEEEE99AEDB - 1d28c19dd748e665"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindvalleyCoding.HomeDashboardViewModel.fetchDataForViewModels() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/HomeDashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "433">
+               </Location>
+               <Location
+                  uuid = "FCEA898D-5BC8-4C47-BB4D-1AEEEE99AEDB - c151d4a2dff2ae2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in MindvalleyCoding.HomeDashboardViewModel.fetchDataForViewModels() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/HomeDashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "FCEA898D-5BC8-4C47-BB4D-1AEEEE99AEDB - 1d28c19dd748e665"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindvalleyCoding.HomeDashboardViewModel.fetchDataForViewModels() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/HomeDashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "FCEA898D-5BC8-4C47-BB4D-1AEEEE99AEDB - c151d4a2dff2541"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in MindvalleyCoding.HomeDashboardViewModel.fetchDataForViewModels() -&gt; ()"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeScreen/ViewModel/HomeDashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

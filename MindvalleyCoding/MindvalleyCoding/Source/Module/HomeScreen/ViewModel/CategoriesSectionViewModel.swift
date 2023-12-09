@@ -9,14 +9,15 @@ import Foundation
 import Combine
 import SwiftUI
 
+@Observable
 class CategoriesSectionViewModel: ObservableObject {
     
-   // MARK: Private properties
+    // MARK: Private properties
     private let networkManager: HomeServiceable
-   
-    @Published var categories: [Category]?
-    @Published var isLoadingShowing = false
-    @Published var error = ""
+    
+    var categories: [Category]?
+    var isLoadingShowing = false
+    var error = ""
     
     // MARK: Initilize property
     init(networkManager: HomeServiceable = HomeServiceManager()) {
@@ -24,16 +25,14 @@ class CategoriesSectionViewModel: ObservableObject {
     }
     
     func getCategoryList() {
-        DispatchQueue.global().async {
-            self.networkManager.getAPI(decodabel: CategoriesResponse.self,
-                                       homeApi: .Categories, isCacheEnable: true) { [weak self] (response, error) in
-                DispatchQueue.main.async {
+        self.networkManager.getAPI(decodabel: CategoriesResponse.self,
+                                   homeApi: .Categories, isCacheEnable: true) { [weak self] (response, error) in
+            DispatchQueue.main.async {
                 self?.isLoadingShowing = false
                 if let error = error, !error.isEmpty {
                     self?.error = error
                 } else {
-                        self?.categories = response?.data?.categories
-                    }
+                    self?.categories = response?.data?.categories
                 }
             }
         }
