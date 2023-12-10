@@ -271,13 +271,13 @@
 		4B98041A2B1A692C00DEB148 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				4BB703112B2621F3009D307C /* HomeScreenDetails */,
-				4B98041B2B1A693800DEB148 /* HomeScreen */,
+				4BB703112B2621F3009D307C /* HomeDashboardDetailsScreen */,
+				4B98041B2B1A693800DEB148 /* HomeDashboardScreen */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		4B98041B2B1A693800DEB148 /* HomeScreen */ = {
+		4B98041B2B1A693800DEB148 /* HomeDashboardScreen */ = {
 			isa = PBXGroup;
 			children = (
 				4B9804502B1B72D400DEB148 /* Manager */,
@@ -287,7 +287,7 @@
 				4B9804432B1B4DE800DEB148 /* Model */,
 				4B98041C2B1A696E00DEB148 /* Views */,
 			);
-			path = HomeScreen;
+			path = HomeDashboardScreen;
 			sourceTree = "<group>";
 		};
 		4B98041C2B1A696E00DEB148 /* Views */ = {
@@ -416,12 +416,12 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		4BB703112B2621F3009D307C /* HomeScreenDetails */ = {
+		4BB703112B2621F3009D307C /* HomeDashboardDetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				4BB703122B262215009D307C /* Views */,
 			);
-			path = HomeScreenDetails;
+			path = HomeDashboardDetailsScreen;
 			sourceTree = "<group>";
 		};
 		4BB703122B262215009D307C /* Views */ = {

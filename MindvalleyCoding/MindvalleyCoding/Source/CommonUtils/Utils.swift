@@ -16,19 +16,6 @@ class Utils {
         return dateFormatter
     }()
     
-//    static let yearFormatter: DateFormatter = {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy"
-//        return formatter
-//    }()
-//    
-//    static let durationFormatter: DateComponentsFormatter = {
-//        let formatter = DateComponentsFormatter()
-//        formatter.unitsStyle = .full
-//        formatter.allowedUnits = [.hour, .minute]
-//        return formatter
-//    }()
-    
    static func getPadding() -> CGFloat {
        var padding = 25.0
         if UIDevice.current.userInterfaceIdiom == .pad {
