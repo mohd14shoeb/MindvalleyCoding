@@ -20,11 +20,7 @@ class HomeDashboardViewModel: ObservableObject {
     @Published var error = ""
     
     private var cancellables = Set<AnyCancellable>()
-    let newEpisodeGridItemLayout: [GridItem] =
-    Array(repeating: .init(.flexible(), spacing: 13), count: 6)
-    let categoryGridItemLayout: [GridItem]  =
-    Array(repeating: .init(.flexible(), spacing: 13), count: 2)
-    
+   
     // MARK: Initilize property
     init(networkManager: HomeServiceable,
          cancellables: Set<AnyCancellable> = Set<AnyCancellable>()) {
