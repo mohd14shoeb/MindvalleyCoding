@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Utils {
     
@@ -27,6 +28,14 @@ class Utils {
 //        formatter.allowedUnits = [.hour, .minute]
 //        return formatter
 //    }()
+    
+   static func getPadding() -> CGFloat {
+       var padding = 25.0
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            padding = 180.0
+        }
+       return padding
+    }
     
     static let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()

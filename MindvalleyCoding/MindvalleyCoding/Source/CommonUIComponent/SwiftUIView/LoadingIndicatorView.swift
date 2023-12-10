@@ -24,16 +24,19 @@ struct LoadingIndicatorView: View {
                 } else if let error = error, !error.isEmpty {
                     HStack {
                         Spacer()
-                        VStack(spacing: 4) {
-                            Text(error).font(.headline)
+                        VStack(spacing: 8) {
+                            Text(error).padding([.leading, .trailing], Utils.getPadding())
                             if self.retryAction != nil {
                                 Button(action: self.retryAction!) {
                                     Text("Retry")
+                                        .font(.custom("Gilroy-Bold", size: 24))
                                 }
                                 .foregroundColor(Color.blue)
                                 .buttonStyle(PlainButtonStyle())
                             }
                         }
+                        .font(.custom("Gilroy-Regular", size: 21))
+                        .multilineTextAlignment(.center)
                         Spacer()
                     }
                 }

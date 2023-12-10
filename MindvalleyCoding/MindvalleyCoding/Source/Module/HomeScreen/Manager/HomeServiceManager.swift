@@ -55,7 +55,7 @@ struct HomeServiceManager: HomeServiceable {
                     completion(nil, networkFailureError)
                 }
             } else {
-                completion(nil, error?.localizedDescription)
+                completion(nil, error?.localizedDescription.description)
             }
         }
     }
