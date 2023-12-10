@@ -27,15 +27,16 @@ struct NewEpisodesGridLayoutView: View {
                 .padding(.all, 14)
         }
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyVGrid(columns: gridItemLayout, spacing: 4) {
-                ForEach(movies) { movie in
-                    NewEpisodesCard(imageURL: movie.mediaURL, 
+            LazyVGrid(columns: self.gridItemLayout,  spacing: 14) {
+                ForEach(movies, id: \.id) { movie in
+                    NewEpisodesCard(imageURL: movie.mediaURL,
                                     footerTitle: movie.mediaTitle,
                                     footerSubTitle: movie.channelTitle,
                                     imageWidth: 174, imageHeight: 420)
+                    
                 }
             }
-             .padding([.leading, .trailing], 14)
+            .padding([.leading, .trailing], 16)
         }
         DividerView(height: 1.0, color: Color.dividerColor, padding: 16)
     }
@@ -43,8 +44,8 @@ struct NewEpisodesGridLayoutView: View {
 }
 
 #Preview {
-    NewEpisodesGridLayoutView(title: "hello india", movies: NewEpisodesResponse.stubedNewEpisodes, gridItemLayout: NewEpisodesResponse.gridItemLayout)
+    NewEpisodesGridLayoutView(title: "hello india", 
+                              movies: NewEpisodesResponse.stubedNewEpisodes,
+                              gridItemLayout: NewEpisodesResponse.gridItemLayout)
         .background(Color.homeScreenBackGroundColor)
 }
-
-

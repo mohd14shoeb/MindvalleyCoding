@@ -23,7 +23,18 @@ extension NewEpisodesResponse {
     }
     
    static var gridItemLayout: [GridItem] {
-        Array(repeating: .init(.flexible(), spacing: 13), count: 6)
+       if #available(iOS 17.0, *) {
+        return Array(repeating: .init(.flexible(), spacing: 13), count: 6)
+       } else {
+           return [
+                GridItem(.fixed(174), spacing: 13),
+                GridItem(.fixed(174), spacing: 13),
+                GridItem(.fixed(174), spacing: 13),
+                GridItem(.fixed(174), spacing: 13),
+                GridItem(.fixed(174), spacing: 13),
+                GridItem(.fixed(174), spacing: 13)
+            ]
+       }
     }
     
 }
