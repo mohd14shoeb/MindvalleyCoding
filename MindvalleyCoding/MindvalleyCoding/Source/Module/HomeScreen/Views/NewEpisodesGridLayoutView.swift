@@ -27,7 +27,8 @@ struct NewEpisodesGridLayoutView: View {
                 .padding(.all, 14)
         }
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyVGrid(columns: self.gridItemLayout,  spacing: 14) {
+            LazyVGrid(columns: self.gridItemLayout,
+                      alignment: .center, spacing: 16) {
                 ForEach(movies, id: \.id) { movie in
                     NewEpisodesCard(imageURL: movie.mediaURL,
                                     footerTitle: movie.mediaTitle,
@@ -38,7 +39,9 @@ struct NewEpisodesGridLayoutView: View {
             }
             .padding([.leading, .trailing], 16)
         }
-        DividerView(height: 1.0, color: Color.dividerColor, padding: 16)
+        DividerView(height: 1.0, 
+                    color: Color.dividerColor,
+                    padding: 16)
     }
     
 }

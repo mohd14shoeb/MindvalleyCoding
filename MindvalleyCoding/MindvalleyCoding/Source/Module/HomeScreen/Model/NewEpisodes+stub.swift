@@ -24,15 +24,15 @@ extension NewEpisodesResponse {
     
    static var gridItemLayout: [GridItem] {
        if #available(iOS 17.0, *) {
-        return Array(repeating: .init(.flexible(), spacing: 13), count: 6)
+        return Array(repeating: .init(.flexible(), spacing: 16), count: 6)
        } else {
            return [
-                GridItem(.fixed(174), spacing: 13),
-                GridItem(.fixed(174), spacing: 13),
-                GridItem(.fixed(174), spacing: 13),
-                GridItem(.fixed(174), spacing: 13),
-                GridItem(.fixed(174), spacing: 13),
-                GridItem(.fixed(174), spacing: 13)
+                GridItem(.fixed(174), spacing: 16),
+                GridItem(.fixed(174), spacing: 16),
+                GridItem(.fixed(174), spacing: 16),
+                GridItem(.fixed(174), spacing: 16),
+                GridItem(.fixed(174), spacing: 16),
+                GridItem(.fixed(174), spacing: 16)
             ]
        }
     }

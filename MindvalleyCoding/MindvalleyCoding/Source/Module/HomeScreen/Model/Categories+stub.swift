@@ -19,7 +19,11 @@ extension CategoriesResponse {
     }
     
     static var gridItemLayout: [GridItem]  {
-        Array(repeating: .init(.flexible(), spacing: 13), count: 2)
+        var columnCount = 2
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            columnCount = 3
+        }
+      return  Array(repeating: .init(.flexible()),  count: columnCount)
     }
 }
 

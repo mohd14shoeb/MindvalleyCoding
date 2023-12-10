@@ -41,7 +41,7 @@ struct CategoriesSectionListView: View {
                         .cornerRadius(35)
                 }
             }
-            .padding([.leading, .trailing], 10)
+            .padding([.leading, .trailing], 16)
         }
     }
 }
