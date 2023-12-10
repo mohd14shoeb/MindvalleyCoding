@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
 
 struct NewEpisodesCard: View {
     private let imageURL: String

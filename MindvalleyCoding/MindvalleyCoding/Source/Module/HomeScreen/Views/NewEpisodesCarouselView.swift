@@ -44,5 +44,7 @@ struct NewEpisodesCarouselView: View {
 }
 
 #Preview {
-    NewEpisodesCarouselView(title: "New Episodes", movies: NewEpisodesResponse.stubedNewEpisodes).background(Color.homeScreenBackGroundColor)
+    NewEpisodesCarouselView(title: "New Episodes", 
+                            movies: NewEpisodesResponse.stubedNewEpisodes)
+    .background(Color.homeScreenBackGroundColor)
 }

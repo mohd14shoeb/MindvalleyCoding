@@ -25,9 +25,11 @@ struct CourseCarouselView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(latestMedias) { media in
-                            CourseDesignCard(media: media, imageWidth: 340, imageHeight: 290)
-                                .padding(.leading, media.id == latestMedias.first?.id ? 16 : 0)
-                                .padding(.trailing, media.id == latestMedias.last?.id ? 16 : 0)
+                            NavigationLink(destination: CourseCarouselDetailView(latestMedia: media)) {
+                                CourseDesignCard(media: media, imageWidth: 340, imageHeight: 290)
+                                    .padding(.leading, media.id == latestMedias.first?.id ? 16 : 0)
+                                    .padding(.trailing, media.id == latestMedias.last?.id ? 16 : 0)
+                            }
                         }
                     }
                 }

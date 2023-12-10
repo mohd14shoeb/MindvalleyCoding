@@ -53,6 +53,8 @@
 		4B98045B2B1B836D00DEB148 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */; };
 		4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */; };
 		4BB7030C2B25D412009D307C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB7030B2B25D412009D307C /* SDWebImageSwiftUI */; };
+		4BB7030E2B2617BA009D307C /* SeriesCarouselDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7030D2B2617BA009D307C /* SeriesCarouselDetailView.swift */; };
+		4BB703102B2617D5009D307C /* CourseCarouselDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7030F2B2617D5009D307C /* CourseCarouselDetailView.swift */; };
 		4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */; };
 		4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */; };
 		4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */; };
@@ -132,6 +134,8 @@
 		4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
 		4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCard.swift; sourceTree = "<group>"; };
+		4BB7030D2B2617BA009D307C /* SeriesCarouselDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCarouselDetailView.swift; sourceTree = "<group>"; };
+		4BB7030F2B2617D5009D307C /* CourseCarouselDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselDetailView.swift; sourceTree = "<group>"; };
 		4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCarouselView.swift; sourceTree = "<group>"; };
 		4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCourseCarouselView.swift; sourceTree = "<group>"; };
 		4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCarouselView.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 		4B98041A2B1A692C00DEB148 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				4BB703112B2621F3009D307C /* HomeScreenDetails */,
 				4B98041B2B1A693800DEB148 /* HomeScreen */,
 			);
 			path = Module;
@@ -407,6 +412,23 @@
 				4BF17F742B220D4600BF8768 /* Gilroy-Medium.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		4BB703112B2621F3009D307C /* HomeScreenDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4BB703122B262215009D307C /* Views */,
+			);
+			path = HomeScreenDetails;
+			sourceTree = "<group>";
+		};
+		4BB703122B262215009D307C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4BB7030D2B2617BA009D307C /* SeriesCarouselDetailView.swift */,
+				4BB7030F2B2617D5009D307C /* CourseCarouselDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4BD84BC72B1C7494000AE51A /* CommonUIComponent */ = {
@@ -582,6 +604,7 @@
 				4B9804312B1A6CA300DEB148 /* EndPointType.swift in Sources */,
 				4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */,
 				4BF17F712B21B92500BF8768 /* NewEpisodesGridLayoutView.swift in Sources */,
+				4BB7030E2B2617BA009D307C /* SeriesCarouselDetailView.swift in Sources */,
 				4B9803EB2B1A686800DEB148 /* ViewController.swift in Sources */,
 				4B98044C2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift in Sources */,
 				4B98043A2B1B15AD00DEB148 /* Color+Ext.swift in Sources */,
@@ -592,6 +615,7 @@
 				4B9804522B1B730500DEB148 /* HomeServiceManager.swift in Sources */,
 				4B98041E2B1A69CD00DEB148 /* HomeView.swift in Sources */,
 				4BF17F732B21E4E800BF8768 /* HomeDashboardView.swift in Sources */,
+				4BB703102B2617D5009D307C /* CourseCarouselDetailView.swift in Sources */,
 				4B86583E2B1BA43F00D01483 /* Categories+stub.swift in Sources */,
 				4B9804382B1B159B00DEB148 /* Color.swift in Sources */,
 				4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */,

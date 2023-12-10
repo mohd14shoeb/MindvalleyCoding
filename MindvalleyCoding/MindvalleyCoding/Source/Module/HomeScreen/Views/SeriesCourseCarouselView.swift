@@ -32,5 +32,7 @@ struct SeriesCourseCarouselView: View {
 }
 
 #Preview {
-    SeriesCourseCarouselView(channelsArray: ChannelsResponse.stubChannels).background(Color.homeScreenBackGroundColor)
+    SeriesCourseCarouselView(channelsArray: 
+                                ChannelsResponse.stubChannels)
+    .background(Color.homeScreenBackGroundColor)
 }

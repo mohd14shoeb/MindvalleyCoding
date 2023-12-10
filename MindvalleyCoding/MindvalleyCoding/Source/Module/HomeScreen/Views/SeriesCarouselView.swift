@@ -25,15 +25,20 @@ struct SeriesCarouselView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(series) { serieModel in
-                            NewEpisodesCard(imageURL: serieModel.coverAssetURL,
-                                            footerTitle: serieModel.title ?? "", footerSubTitle: "",
-                                            imageWidth: 174, imageHeight: 400)
-                            .padding(.leading, serieModel.id == series.first?.id ? 16 : 0)
-                            .padding(.trailing, serieModel.id == series.last?.id ? 16 : 0)
+                            NavigationLink(destination: SeriesCarouselDetailView(seriesModel: serieModel)) {
+                                NewEpisodesCard(imageURL: serieModel.coverAssetURL,
+                                                footerTitle: serieModel.title ?? "", footerSubTitle: "",
+                                                imageWidth: 174, imageHeight: 400)
+                                .padding(.leading, serieModel.id == series.first?.id ? 16 : 0)
+                                .padding(.trailing, serieModel.id == series.last?.id ? 16 : 0)
+                            }
+                            
                         }
                     }
                 }
-                DividerView(height: 1.0, color: Color.dividerColor, padding: 16)
+                DividerView(height: 1.0, 
+                            color: Color.dividerColor,
+                            padding: 16)
             }
         }
     }
