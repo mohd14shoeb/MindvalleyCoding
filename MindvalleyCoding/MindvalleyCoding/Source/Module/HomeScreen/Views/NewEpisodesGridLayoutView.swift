@@ -30,11 +30,13 @@ struct NewEpisodesGridLayoutView: View {
             LazyVGrid(columns: self.gridItemLayout,
                       alignment: .center, spacing: 16) {
                 ForEach(movies, id: \.id) { movie in
-                    NewEpisodesCard(imageURL: movie.mediaURL,
-                                    footerTitle: movie.mediaTitle,
-                                    footerSubTitle: movie.channelTitle,
-                                    imageWidth: 174, imageHeight: 420)
-                    
+                    NavigationLink(destination: NewEpisodesGridDetailsView(media: movie)) {
+                        NewEpisodesCard(imageURL: movie.mediaURL,
+                                        footerTitle: movie.mediaTitle,
+                                        footerSubTitle: movie.channelTitle,
+                                        imageWidth: 174, imageHeight: 420)
+                        
+                    }
                 }
             }
             .padding([.leading, .trailing], 16)
