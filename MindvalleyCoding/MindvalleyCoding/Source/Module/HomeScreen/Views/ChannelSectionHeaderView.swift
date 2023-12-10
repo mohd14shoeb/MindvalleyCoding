@@ -6,44 +6,45 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
+import SDWebImageSwiftUI
 
 struct ChannelSectionHeaderView: View {
     private let channel: Channels?
+    @State var isLoading: Bool = true
     
     init(channel: Channels?) {
         self.channel = channel
     }
+    
     var body: some View {
         HStack {
-            CachedAsyncImage(
-                url: channel?.iconAsset?.thumbnailURL ?? "",
-                placeholder: { progress in
-                    ZStack {
-                        Color.gray.opacity(1.03)
+            WebImage(url: URL(string: channel?.iconAsset?.thumbnailURL ?? ""))
+                .onFailure { _ in
+                    self.isLoading = false
+                }
+                .onSuccess { _, _, _  in
+                    self.isLoading = false
+                }
+                .resizable()
+                .placeholder {
+                    if isLoading {
+                        Color.gray.opacity(1.0)
                         ProgressView()
-                    }
-                },
-                image: {
-                    Image(uiImage: $0)
-                        .resizable()
-                        .scaledToFill()
-                },
-                error: { error in
-                    ZStack {
-                        Color.gray.opacity(1.03)
-                        VStack {
-                            Text("No Image")
-                                .foregroundColor(Color.yellow)
-                                .font(.custom("Gilroy-Regular", size: 13))
-                                .multilineTextAlignment(.center)
+                    } else {
+                        ZStack {
+                            Color.gray.opacity(1.0)
+                            VStack {
+                                Text("No Image")
+                                    .foregroundColor(Color.white)
+                                    .font(.custom("Gilroy-Regular", size: 13))
+                                    .multilineTextAlignment(.center)
+                            }
                         }
                     }
                     
                 }
-            )
             .clipShape(Circle())
-            .frame(width: 54, height: 54)
+            .frame(width: 56, height: 56)
             footerTitle
         }
     }

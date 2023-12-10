@@ -29,8 +29,6 @@ struct HomeDashboardView: View {
                                 .padding([.leading, .trailing], 14)
                             if let newEpisodes = ViewModel.viewModelNewEpisodes.newApisodesArray,
                                !newEpisodes.isEmpty {
-                                //  NewEpisodesCarouselView(title: NewEpisodesResponse.newEpisodeTitle, 
-                                //                             movies: newEpisodes)
                                 NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
                                                           movies: newEpisodes,
                                                           gridItemLayout: NewEpisodesResponse.gridItemLayout)
@@ -57,7 +55,9 @@ struct HomeDashboardView: View {
             .task {
                 self.getAllAPICall()
             }
-        
+            .onDisappear {
+              //  self.ViewModel.reloadCache()
+            }
     }
     
     private var titleView: some View {
@@ -71,6 +71,7 @@ struct HomeDashboardView: View {
     func getAllAPICall() {
         self.ViewModel.fetchHomeDashboardResponse()
     }
+    
 }
 
 #Preview {

@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
+import SDWebImageSwiftUI
 
 struct ImageCardView: View {
     private let imageURL: String
     private let imageWidth: Double
     private let imageHeight: Double
+    @State var isLoading: Bool = true
     
+    // MARK: - Initializers
     init(imageURL: String,
          imageWidth: Double,
          imageHeight: Double) {
@@ -21,22 +23,21 @@ struct ImageCardView: View {
         self.imageHeight = imageHeight
     }
 
-        var body: some View {
-            VStack {
-                CachedAsyncImage(
-                    url: self.imageURL,
-                    placeholder: {
-                        ZStack {
-                            Color.gray.opacity(1.0)
-                            ProgressView()
-                        }
-                    },
-                    image: {
-                        Image(uiImage: $0)
-                            .resizable()
-                            .scaledToFill()
-                    },
-                    error: { error in
+    var body: some View {
+        VStack {
+            WebImage(url: URL(string: self.imageURL))
+                .onFailure { error in
+                    self.isLoading = false
+                }
+                .onSuccess { image, cacheType, data  in
+                    self.isLoading = false
+                }
+                .resizable()
+                .placeholder {
+                    if isLoading {
+                        Color.gray.opacity(1.0)
+                        ProgressView()
+                    } else {
                         ZStack {
                             Color.gray.opacity(1.0)
                             VStack {
@@ -46,15 +47,17 @@ struct ImageCardView: View {
                                     .multilineTextAlignment(.center)
                             }
                         }
-                        
                     }
-                )
-            }
-            .frame(width: self.imageWidth, height: self.imageHeight)
-            .clipped()
-            .cornerRadius(10)
-            .shadow(radius: 10)
+                    
+                }
+                .scaledToFill()
         }
+        .frame(width: self.imageWidth, height: self.imageHeight)
+        .clipped()
+        .cornerRadius(10)
+        .shadow(radius: 10)
+    }
+    
 }
 
 #Preview {
@@ -62,3 +65,5 @@ struct ImageCardView: View {
              imageWidth: 197.0,
                   imageHeight: 320.0).background(Color.homeScreenBackGroundColor)
 }
+
+

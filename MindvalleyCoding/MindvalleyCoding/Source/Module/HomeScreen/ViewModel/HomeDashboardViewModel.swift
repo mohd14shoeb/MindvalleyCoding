@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
-
+import SDWebImageSwiftUI
 
 class HomeDashboardViewModel: ObservableObject {
     
@@ -87,6 +87,11 @@ class HomeDashboardViewModel: ObservableObject {
                 .store(in: &self.cancellables)
         }
         
+    }
+    
+    func reloadCache() {
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk(onCompletion: nil)
     }
     
 }

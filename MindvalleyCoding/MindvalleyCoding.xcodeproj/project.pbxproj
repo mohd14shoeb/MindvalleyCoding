@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B10339D2B1C913E008EE486 /* ChannelSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */; };
-		4B86583A2B1BA3C300D01483 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B8658392B1BA3C300D01483 /* CachedAsyncImage */; };
 		4B86583C2B1BA42600D01483 /* NewEpisodes+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583B2B1BA42600D01483 /* NewEpisodes+stub.swift */; };
 		4B86583E2B1BA43F00D01483 /* Categories+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583D2B1BA43F00D01483 /* Categories+stub.swift */; };
 		4B8658402B1BA45000D01483 /* Channels+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583F2B1BA45000D01483 /* Channels+stub.swift */; };
@@ -53,6 +52,7 @@
 		4B9804592B1B833E00DEB148 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B9804582B1B833E00DEB148 /* Gilroy-Bold.ttf */; };
 		4B98045B2B1B836D00DEB148 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B98045A2B1B836D00DEB148 /* Gilroy-Thin.ttf */; };
 		4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98045C2B1BA14800DEB148 /* NewEpisodesCard.swift */; };
+		4BB7030C2B25D412009D307C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4BB7030B2B25D412009D307C /* SDWebImageSwiftUI */; };
 		4BD84BC42B1C6334000AE51A /* SeriesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC32B1C6334000AE51A /* SeriesCarouselView.swift */; };
 		4BD84BC62B1C6580000AE51A /* SeriesCourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC52B1C6580000AE51A /* SeriesCourseCarouselView.swift */; };
 		4BD84BC92B1C7F01000AE51A /* CourseCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD84BC82B1C7F01000AE51A /* CourseCarouselView.swift */; };
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B86583A2B1BA3C300D01483 /* CachedAsyncImage in Frameworks */,
+				4BB7030C2B25D412009D307C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +444,7 @@
 			);
 			name = MindvalleyCoding;
 			packageProductDependencies = (
-				4B8658392B1BA3C300D01483 /* CachedAsyncImage */,
+				4BB7030B2B25D412009D307C /* SDWebImageSwiftUI */,
 			);
 			productName = MindvalleyCoding;
 			productReference = 4B9803E32B1A686800DEB148 /* MindvalleyCoding.app */;
@@ -519,7 +519,7 @@
 			);
 			mainGroup = 4B9803DA2B1A686800DEB148;
 			packageReferences = (
-				4B8658382B1BA3C300D01483 /* XCRemoteSwiftPackageReference "CachedAsyncImage" */,
+				4BB7030A2B25D412009D307C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 4B9803E42B1A686800DEB148 /* Products */;
 			projectDirPath = "";
@@ -955,21 +955,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4B8658382B1BA3C300D01483 /* XCRemoteSwiftPackageReference "CachedAsyncImage" */ = {
+		4BB7030A2B25D412009D307C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bullinnyc/CachedAsyncImage";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 2.2.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4B8658392B1BA3C300D01483 /* CachedAsyncImage */ = {
+		4BB7030B2B25D412009D307C /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4B8658382B1BA3C300D01483 /* XCRemoteSwiftPackageReference "CachedAsyncImage" */;
-			productName = CachedAsyncImage;
+			package = 4BB7030A2B25D412009D307C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
