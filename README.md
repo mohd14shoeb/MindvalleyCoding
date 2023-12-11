@@ -1,8 +1,9 @@
 # MindvalleyCoding
 
-# Implemted backend API 
-# Cache API Response for Offline Mode
-# Cache Image 
+## Important Points cover in this project
+ 1. Implemted backend API 
+ 2. Cache API Response for Offline Mode
+ 3. Cache Image 
 
 This Project was given by a company for technical evaluation. It covers GridLayout and ScrollView to show the dashboard design.
 
