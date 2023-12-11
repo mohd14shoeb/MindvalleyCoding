@@ -1,5 +1,11 @@
 # MindvalleyCoding
 
+# Implemted backend API 
+# Cache API Response for Offline Mode
+# Cache Image 
+
+This Project was given by a company for technical evaluation. It covers GridLayout and ScrollView to show the dashboard design.
+
 #iPad screen
 ![simulator_screenshot_66693793-6E94-47D7-A78E-3F3F6F7E2CE8](https://github.com/mohd14shoeb/MindvalleyCoding/assets/892742/1e3c9684-4b5a-429f-bda6-bf7813a599b7)
 
