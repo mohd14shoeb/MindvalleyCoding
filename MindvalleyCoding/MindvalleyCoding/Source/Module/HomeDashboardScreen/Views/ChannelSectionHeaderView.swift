@@ -53,21 +53,13 @@ struct ChannelSectionHeaderView: View {
         VStack {
             Group {
                Text(channel?.title ?? "")
-                Text(self.getSerisEpisodeText(channel: self.channel))
+                Text(channel?.getSerisEpisodeText ?? "")
                     .foregroundColor(Color.newApisodesTitleColor)
             }
             .frame(maxWidth:.infinity, alignment: .topLeading)
             .foregroundColor(Color.listSectionTitleColor)
             .font(.custom("Gilroy-Bold", size: 18))
             .padding([.leading, .trailing], 4)
-        }
-    }
-    
-    func getSerisEpisodeText(channel: Channels?) -> String {
-        if (channel?.series?.count ?? 0) > 0 {
-            String("\(channel?.mediaCount ?? 0) series")
-        } else {
-            String("\(channel?.mediaCount ?? 0) episodes")
         }
     }
 }

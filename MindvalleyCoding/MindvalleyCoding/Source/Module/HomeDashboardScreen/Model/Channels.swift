@@ -34,6 +34,20 @@ struct Channels: Codable, Identifiable {
     var coverAssetURL: String {
         coverAsset?.url ?? ""
     }
+    
+    var getSerisEpisodeText: String {
+        if (self.series?.count ?? 0) > 0 {
+            if self.mediaCount ?? 0 > 0 {
+                return String("\(self.mediaCount ?? 0 ) series")
+            }
+            return  ""
+        } else {
+            if self.mediaCount ?? 0 > 0 {
+                return String("\(self.mediaCount ?? 0) episodes")
+            }
+            return ""
+        }
+    }
 }
 
 // MARK: - CoverAsset
