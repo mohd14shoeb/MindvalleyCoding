@@ -7,22 +7,30 @@
 
 import Foundation
 import Combine
-import SwiftUI
+
+protocol CategoriesSectionViewModelProtocol {
+    func getCategoryList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                _ error: String?) -> Void?)
+}
 
 class CategoriesSectionViewModel: ObservableObject {
     
     // MARK: Private properties
-    private let networkManager: HomeServiceable
+    private let networkManager: HomeServiceProtocol
     
     @Published  var categories: [Category]?
     @Published  var isLoadingShowing = false
     @Published  var error = ""
     
     // MARK: Initilize property
-    init(networkManager: HomeServiceable = HomeServiceManager()) {
+    init(networkManager: HomeServiceProtocol = HomeServiceManager()) {
         self.networkManager = networkManager
     }
     
+
+}
+
+extension CategoriesSectionViewModel: CategoriesSectionViewModelProtocol {
     func getCategoryList(completion: @escaping (_ isLoadingShowing: Bool?,
                                                 _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: CategoriesResponse.self,

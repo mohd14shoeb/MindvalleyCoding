@@ -30,15 +30,18 @@ struct NewEpisodesCard: View {
             ImageCardView(imageURL: imageURL,
                           imageWidth: 174, imageHeight: 280)
                 .padding(.bottom, 8)
+            
             Group {
                 Text(footerTitle ?? "").minimumScaleFactor(0.01)
                     .foregroundColor(Color.listSectionTitleColor)
                     .font(.custom("Gilroy-Bold", size: 18))
                     .padding(.bottom, 6)
+    
                 Text(footerSubTitle?.uppercased() ?? "")
                     .foregroundColor(Color.newApisodesTitleColor)
                     .font(.custom("Gilroy-Bold", size: 14))
             }
+            .multilineTextAlignment(.leading)
             .frame(maxWidth:.infinity, alignment: .topLeading)
             .padding([.leading, .trailing], 4)
             .padding(.bottom, 6)

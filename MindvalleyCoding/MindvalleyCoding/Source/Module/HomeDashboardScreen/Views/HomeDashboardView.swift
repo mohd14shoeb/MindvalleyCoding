@@ -18,32 +18,36 @@ struct HomeDashboardView: View {
                     .ignoresSafeArea()
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        if ViewModel.isLoadingShowing {
-                            LoadingIndicatorView(isLoading: ViewModel.isLoadingShowing,
+                        if self.ViewModel.isLoadingShowing {
+                            LoadingIndicatorView(isLoading: self.ViewModel.isLoadingShowing,
                                                  error: ViewModel.error) {
                                 self.getAllAPICall()
                             }.position(x: CGFloat(Int(UIScreen.main.bounds.size.width) / 2),
                                        y: CGFloat(Int(UIScreen.main.bounds.size.height) / 2) - 100)
                         } else {
-                            titleView
+                            self.titleView
                                 .padding([.leading, .trailing], 14)
-                            if let newEpisodes = ViewModel.viewModelNewEpisodes.newApisodesArray,
+                            if let newEpisodes = self.ViewModel.viewModelNewEpisodes.newApisodesArray,
                                !newEpisodes.isEmpty {
                                 NewEpisodesGridLayoutView(title: NewEpisodesResponse.newEpisodeTitle,
                                                           movies: newEpisodes,
                                                           gridItemLayout: NewEpisodesResponse.gridItemLayout)
                             }
-                            if let channels = ViewModel.viewModelChannels.channelsArray,
+                            if let channels = self.ViewModel.viewModelChannels.channelsArray,
                                !channels.isEmpty {
                                 SeriesCourseCarouselView(channelsArray: channels)
                             }
-                            if let categories = ViewModel.viewModelCategories.categories,
+                            if let categories = self.ViewModel.viewModelCategories.categories,
                                !categories.isEmpty {
                                 CategoriesSectionListView(title: CategoriesResponse.categoryTitle,
                                                           gridItemLayout: CategoriesResponse.gridItemLayout,
                                                           categories: categories)
                             }
                         }
+                    }.onViewRenderCycle {
+                        print("View Did load")
+                    }didAppearAction: {
+                        print("View Did Appear")
                     }
                 }
             }
@@ -52,8 +56,9 @@ struct HomeDashboardView: View {
             .preferredColorScheme(.dark)
             
         }.navigationViewStyle(StackNavigationViewStyle())
+            
             .task {
-                self.getAllAPICall()
+               self.getAllAPICall()
             }
             .onDisappear {
               //  self.ViewModel.reloadCache()

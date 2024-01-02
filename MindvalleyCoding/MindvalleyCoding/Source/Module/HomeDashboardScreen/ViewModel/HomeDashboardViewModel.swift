@@ -10,6 +10,12 @@ import SwiftUI
 import Combine
 import SDWebImageSwiftUI
 
+protocol HomeDashboardViewModelProtocol {
+    func fetchNewEpisodesViewModels()
+    func fetchSeriesAndCourseViewModels()
+    func fetchCategoryListViewModels()
+}
+
 class HomeDashboardViewModel: ObservableObject {
     
     // MARK: Observer property
@@ -22,7 +28,7 @@ class HomeDashboardViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
    
     // MARK: Initilize property
-    init(networkManager: HomeServiceable,
+    init(networkManager: HomeServiceProtocol,
          cancellables: Set<AnyCancellable> = Set<AnyCancellable>()) {
         self.viewModelNewEpisodes = NewEpisodesViewModel(networkManager: networkManager)
         self.viewModelChannels = ChannelsViewModel(networkManager: networkManager)
@@ -30,7 +36,7 @@ class HomeDashboardViewModel: ObservableObject {
         self.cancellables = cancellables
     }
     
-    
+
     
     // MARK: fetch All API
     func fetchHomeDashboardResponse() {

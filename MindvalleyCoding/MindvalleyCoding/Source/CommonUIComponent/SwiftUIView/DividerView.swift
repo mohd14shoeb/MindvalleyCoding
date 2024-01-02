@@ -12,7 +12,9 @@ struct DividerView: View {
     private let color: Color
     private let padding: CGFloat
     
-    init(height: CGFloat, color: Color, padding: CGFloat) {
+    init(height: CGFloat, 
+         color: Color,
+         padding: CGFloat) {
         self.height = height
         self.color = color
         self.padding = padding

@@ -6,26 +6,29 @@
 //
 
 import Foundation
-
 import Combine
-import SwiftUI
 
+protocol NewEpisodesViewModelProtocol {
+    func getNewEpisodesList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                   _ error: String?) -> Void?)
+}
 
 class NewEpisodesViewModel: ObservableObject {
     
     // MARK: Private properties
-    private let networkManager: HomeServiceable
+    private let networkManager: HomeServiceProtocol
     @Published  var newApisodesArray: [Media]?
     @Published var isLoadingShowing = true
     @Published var error = ""
     
-    
-    
     // MARK: Initilize property
-    init(networkManager: HomeServiceable = HomeServiceManager()) {
+    init(networkManager: HomeServiceProtocol = HomeServiceManager()) {
         self.networkManager = networkManager
     }
-    
+        
+}
+
+extension NewEpisodesViewModel: NewEpisodesViewModelProtocol {
     func getNewEpisodesList(completion: @escaping (_ isLoadingShowing: Bool?,
                                                    _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: NewEpisodesResponse.self,
@@ -41,6 +44,4 @@ class NewEpisodesViewModel: ObservableObject {
             }
         }
     }
-    
 }
-

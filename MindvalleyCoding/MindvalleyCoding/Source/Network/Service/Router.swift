@@ -81,6 +81,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60.0)
         request.httpMethod = route.httpMethod.rawValue
+        request.httpBody = route.body
         
         return request
     }

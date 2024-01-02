@@ -14,4 +14,12 @@ protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
+    var body: Data? { get }
+}
+
+ extension EndPointType {
+    var scheme: String { return "https" }
+    var method: HTTPMethod { return .get }
+    var headers: [String: String] { return [:] }
+    var body: Data? { return nil }
 }

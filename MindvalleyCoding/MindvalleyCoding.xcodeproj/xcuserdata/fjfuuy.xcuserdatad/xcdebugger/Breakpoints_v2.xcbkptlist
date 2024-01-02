@@ -7,33 +7,113 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4E0CF1C6-4CF7-4EE3-923C-AE4385D1B7A3"
+            uuid = "BF9F136C-DF64-4305-9152-EF608CB14086"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BF9F136C-DF64-4305-9152-EF608CB14086 - fbd24028f5822932"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.position(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MindvalleyCoding.NewEpisodesGridLayoutView&gt;, Swift.Optional&lt;MindvalleyCoding.SeriesCourseCarouselView&gt;, Swift.Optional&lt;MindvalleyCoding.CategoriesSectionListView&gt;)&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.position(x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MindvalleyCoding.NewEpisodesGridLayoutView&gt;, Swift.Optional&lt;MindvalleyCoding.SeriesCourseCarouselView&gt;, Swift.Optional&lt;MindvalleyCoding.CategoriesSectionListView&gt;)&gt;&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.preferredColorScheme(Swift.Optional&lt;SwiftUI.ColorScheme&gt;) -&gt; some&gt;&gt;.0 in MindvalleyCoding.HomeDashboardView.body.getter : some"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "3246">
+               </Location>
+               <Location
+                  uuid = "BF9F136C-DF64-4305-9152-EF608CB14086 - 73cd8c1e3ecd474d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onViewRenderCycle(didLoadAction: () -&gt; (), didAppearAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.onViewRenderCycle(didLoadAction: () -&gt; (), didAppearAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.preferredColorScheme(Swift.Optional&lt;SwiftUI.ColorScheme&gt;) -&gt; some&gt;&gt;.0 in MindvalleyCoding.HomeDashboardView.body.getter : some"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F90426C-F2DF-4875-9315-89E3D54D44B8"
+            uuid = "F68C4992-0E09-43C0-8186-3951E2A37177"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F68C4992-0E09-43C0-8186-3951E2A37177 - c553d68bd7d91985"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.preferredColorScheme(Swift.Optional&lt;SwiftUI.ColorScheme&gt;) -&gt; some&gt;&gt;.0 in MindvalleyCoding.HomeDashboardView.body.getter : some"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "F68C4992-0E09-43C0-8186-3951E2A37177 - b8dfb6f0a5a34086"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onViewRenderCycle(didLoadAction: () -&gt; (), didAppearAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.onViewRenderCycle(didLoadAction: () -&gt; (), didAppearAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.preferredColorScheme(Swift.Optional&lt;SwiftUI.ColorScheme&gt;) -&gt; some&gt;&gt;.0 in MindvalleyCoding.HomeDashboardView.body.getter : some"
+                  moduleName = "MindvalleyCoding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shoebkhan/Development/iOS_Development/Git_DemoProject/Mindvalley_Project/MindvalleyCoding/MindvalleyCoding/Source/Module/HomeDashboardScreen/Views/HomeDashboardView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "672F0864-1F27-4BFF-9058-708FD7BB8B09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindvalleyCoding/Source/Network/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "buildRequest(from:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

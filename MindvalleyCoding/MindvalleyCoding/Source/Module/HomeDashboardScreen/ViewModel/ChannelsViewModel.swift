@@ -8,19 +8,26 @@
 import Foundation
 import Combine
 
+protocol ChannelsViewModelProtocol {
+    func getChannelSeriesAndCourseList(completion: @escaping (_ isLoadingShowing: Bool?,
+                                                              _ error: String?) -> Void?)
+}
+
 class ChannelsViewModel: ObservableObject {
     
     // MARK: Private properties
-    private let networkManager: HomeServiceable
+    private let networkManager: HomeServiceProtocol
     @Published  var channelsArray: [Channels]?
     @Published var isLoadingShowing = false
     @Published var error = ""
     
     // MARK: Initilize property
-    init(networkManager: HomeServiceable = HomeServiceManager()) {
+    init(networkManager: HomeServiceProtocol) {
         self.networkManager = networkManager
     }
-    
+}
+
+extension ChannelsViewModel: ChannelsViewModelProtocol {
     func getChannelSeriesAndCourseList(completion: @escaping (_ isLoadingShowing: Bool?,
                                                                _ error: String?) -> Void?) {
         self.networkManager.getAPI(decodabel: ChannelsResponse.self,
@@ -36,5 +43,5 @@ class ChannelsViewModel: ObservableObject {
             }
         }
     }
-    
 }
+

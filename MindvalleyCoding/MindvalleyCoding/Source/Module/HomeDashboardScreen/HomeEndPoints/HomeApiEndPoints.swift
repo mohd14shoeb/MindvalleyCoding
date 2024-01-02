@@ -12,6 +12,7 @@ public enum HomeApiEndPoints {
     case getNewEpisodesList
     case getChannels
     case Categories
+    case checkData(parameter: [String: Any])
     case none
 }
 
@@ -42,6 +43,8 @@ extension HomeApiEndPoints: EndPointType {
         switch self {
         case .getChannels, .getNewEpisodesList, .Categories:
             return .get
+        case .checkData:
+            return .post
         default: return .delete
         }
     }
@@ -56,10 +59,19 @@ extension HomeApiEndPoints: EndPointType {
 
     var headers: HTTPHeaders? {
         switch self {
-        case .getChannels, .getNewEpisodesList, .Categories, .none:
+        case .getChannels, .getNewEpisodesList, .Categories,.checkData, .none:
             return nil
         }
     }
-
+    
+    var body: Data?  {
+        switch self {
+        case .getChannels, .getNewEpisodesList, .Categories, .none:
+            return nil
+        case .checkData(parameter: let parameter):
+            return try? JSONSerialization.data(withJSONObject: parameter)
+        }
+    }
+    
 }
 

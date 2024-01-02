@@ -20,10 +20,10 @@ struct CourseCarouselView: View {
             if let latestMedias = self.channels?.latestMedia,
                 !latestMedias.isEmpty {
                 ChannelSectionHeaderView(channel: self.channels)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 16)
                     .padding([.top,.bottom], 20)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 16) {
+                    LazyHStack(alignment: .top, spacing: 16) {
                         ForEach(latestMedias) { media in
                             NavigationLink(destination: CourseCarouselDetailView(latestMedia: media)) {
                                 CourseDesignCard(media: media, imageWidth: 340, imageHeight: 290)
@@ -33,7 +33,9 @@ struct CourseCarouselView: View {
                         }
                     }
                 }
-                DividerView(height: 1.0, color: Color.dividerColor, padding: 16)
+                DividerView(height: 1.0, 
+                            color: Color.dividerColor,
+                            padding: 16)
             }
             
         }
@@ -41,6 +43,7 @@ struct CourseCarouselView: View {
 }
 
 #Preview {
-    CourseCarouselView(latestMedias: ChannelsResponse.stubChannel)
+    CourseCarouselView(latestMedias: 
+                        ChannelsResponse.stubChannel)
         .background(Color.homeScreenBackGroundColor)
 }

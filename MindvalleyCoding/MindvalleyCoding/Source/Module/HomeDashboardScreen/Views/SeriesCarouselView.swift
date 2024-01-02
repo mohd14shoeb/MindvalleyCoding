@@ -20,10 +20,10 @@ struct SeriesCarouselView: View {
             if let series = self.channels?.series,
                 !series.isEmpty {
                 ChannelSectionHeaderView(channel: self.channels)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 16)
                     .padding([.top,.bottom], 20)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 16) {
+                    LazyHStack(alignment: .top, spacing: 16) {
                         ForEach(series) { serieModel in
                             NavigationLink(destination: SeriesCarouselDetailView(seriesModel: serieModel)) {
                                 NewEpisodesCard(imageURL: serieModel.coverAssetURL,

@@ -25,7 +25,7 @@ enum Result<String> {
     case failure(String)
 }
 
-struct HomeServiceManager: HomeServiceable {
+struct HomeServiceManager: HomeServiceProtocol {
 
     // MARK: Private  Properties
     private let router = Router<HomeApiEndPoints>()

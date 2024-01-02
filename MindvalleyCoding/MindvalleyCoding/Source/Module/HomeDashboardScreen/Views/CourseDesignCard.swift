@@ -24,8 +24,10 @@ struct CourseDesignCard: View {
             ImageCardView(imageURL: self.media?.coverAssetURL ?? "",
                           imageWidth: 340, imageHeight: 200)
                 .padding(.bottom, 8)
+            
             Text(self.media?.title ?? "")
                 .frame(maxWidth:.infinity, alignment: .topLeading)
+                .multilineTextAlignment(.leading)
                 .foregroundColor(Color.listSectionTitleColor)
                 .font(.custom("Gilroy-Bold", size: 18))
                 .padding([.leading, .trailing], 4)
@@ -39,4 +41,5 @@ struct CourseDesignCard: View {
 #Preview {
     CourseDesignCard(media: ChannelsResponse.stubMedia,
                      imageWidth: 340, imageHeight: 180)
+    .background(Color.homeScreenBackGroundColor)
 }

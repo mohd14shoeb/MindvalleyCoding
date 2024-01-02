@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B10339D2B1C913E008EE486 /* ChannelSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */; };
+		4B1CD4812B2F01BB00E46F99 /* ViewLifeCycleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CD4802B2F01BB00E46F99 /* ViewLifeCycleModifier.swift */; };
 		4B86583C2B1BA42600D01483 /* NewEpisodes+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583B2B1BA42600D01483 /* NewEpisodes+stub.swift */; };
 		4B86583E2B1BA43F00D01483 /* Categories+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583D2B1BA43F00D01483 /* Categories+stub.swift */; };
 		4B8658402B1BA45000D01483 /* Channels+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86583F2B1BA45000D01483 /* Channels+stub.swift */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		4B10339C2B1C913E008EE486 /* ChannelSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSectionHeaderView.swift; sourceTree = "<group>"; };
+		4B1CD4802B2F01BB00E46F99 /* ViewLifeCycleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLifeCycleModifier.swift; sourceTree = "<group>"; };
 		4B86583B2B1BA42600D01483 /* NewEpisodes+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEpisodes+stub.swift"; sourceTree = "<group>"; };
 		4B86583D2B1BA43F00D01483 /* Categories+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+stub.swift"; sourceTree = "<group>"; };
 		4B86583F2B1BA45000D01483 /* Channels+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+stub.swift"; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1CD47F2B2F017E00E46F99 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				4B1CD4802B2F01BB00E46F99 /* ViewLifeCycleModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		4B9803DA2B1A686800DEB148 = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +447,7 @@
 		4BD84BC72B1C7494000AE51A /* CommonUIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				4B1CD47F2B2F017E00E46F99 /* ViewModifier */,
 				4BE4988D2B24B9EA00B9C0D0 /* SwiftUIView */,
 			);
 			path = CommonUIComponent;
@@ -612,6 +623,7 @@
 				4B98044C2B1B6D5F00DEB148 /* CategoriesSectionViewModel.swift in Sources */,
 				4B98043A2B1B15AD00DEB148 /* Color+Ext.swift in Sources */,
 				4B86584C2B1BDBD700D01483 /* ChannelsViewModel.swift in Sources */,
+				4B1CD4812B2F01BB00E46F99 /* ViewLifeCycleModifier.swift in Sources */,
 				4B9804422B1B3AA900DEB148 /* CategoriesSectionListView.swift in Sources */,
 				4BE498892B24745000B9C0D0 /* DividerView.swift in Sources */,
 				4B98045D2B1BA14800DEB148 /* NewEpisodesCard.swift in Sources */,

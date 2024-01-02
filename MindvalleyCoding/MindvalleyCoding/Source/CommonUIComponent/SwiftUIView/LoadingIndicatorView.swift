@@ -15,13 +15,16 @@ struct LoadingIndicatorView: View {
     
     var body: some View {
             Group {
-                if isLoading, let error = error, error.isEmpty  {
+                if isLoading, 
+                    let error = error,
+                    error.isEmpty  {
                     VStack(alignment: .center) {
                         ProgressView()
                             .controlSize(.large)
                             .progressViewStyle(CircularProgressViewStyle(tint: Color.gray))
                     }
-                } else if let error = error, !error.isEmpty {
+                } else if let error = error, 
+                            !error.isEmpty {
                     HStack {
                         Spacer()
                         VStack(spacing: 8) {
