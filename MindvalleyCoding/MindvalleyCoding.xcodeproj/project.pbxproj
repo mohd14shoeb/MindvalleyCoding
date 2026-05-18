@@ -465,6 +465,7 @@
 				4B9803DF2B1A686800DEB148 /* Sources */,
 				4B9803E02B1A686800DEB148 /* Frameworks */,
 				4B9803E12B1A686800DEB148 /* Resources */,
+				4BD6D4D02FBB5A8E00F8250E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -548,6 +549,7 @@
 			mainGroup = 4B9803DA2B1A686800DEB148;
 			packageReferences = (
 				4B95BE362B262F7E00000BBE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				4BD6D4C92FBB4B9900F8250E /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 4B9803E42B1A686800DEB148 /* Products */;
 			projectDirPath = "";
@@ -593,6 +595,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BD6D4D02FBB5A8E00F8250E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# SwiftLint - using SPM artifact binary first, then Homebrew\nexport PATH=\\\"/usr/local/bin:/opt/homebrew/bin:$PATH\\\"\n\nSWIFTLINT=\\\"${BUILD_DIR%/Build/*}SourcePackages/artifacts/swiftlint/SwiftLintBinary/SwiftLintBinary.artifactbundle/macos/swiftlint\\\"\n\nif [ -f \\\"$SWIFTLINT\\\" ]; then\n    \\\"$SWIFTLINT\\\"\nelif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \\\"warning: SwiftLint not installed - run 'brew install swiftlint' or resolve SPM packages\\\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B9803DF2B1A686800DEB148 /* Sources */ = {
@@ -826,6 +850,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MindvalleyCoding/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -853,6 +878,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MindvalleyCoding/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -993,6 +1019,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.2.5;
+			};
+		};
+		4BD6D4C92FBB4B9900F8250E /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
